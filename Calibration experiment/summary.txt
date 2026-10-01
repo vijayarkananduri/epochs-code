@@ -1,0 +1,64 @@
+======================================================================
+CALIBRATION SUMMARY
+======================================================================
+
+preset       model   overall_correct   win_rate
+----------------------------------------------------------------------
+cheat        dqn               0.384      0.395
+cheat        ppo               0.114      0.000
+cheat        a2c               0.000      0.000
+cheat        sac               0.478      0.910
+no_cheat     dqn               0.330      0.000
+no_cheat     ppo               0.001      0.000
+no_cheat     a2c               0.005      0.000
+no_cheat     sac               0.080      0.000
+
+
+--- cheat / dqn ---
+  very unsure       n=  13029  correct= 41.3%
+  unsure            n=   7724  correct= 39.7%
+  confident         n=   2324  correct= 23.1%
+  very confident    n=    695  correct= 22.7%
+
+--- cheat / ppo ---
+  very unsure       n=   3133  correct= 49.6%
+  unsure            n=   2827  correct= 27.6%
+  confident         n=   4210  correct=  7.9%
+  very confident    n=  25335  correct=  5.5%
+
+--- cheat / a2c ---
+  very unsure       n=      0  correct=  0.0%
+  unsure            n=      0  correct=  0.0%
+  confident         n=   8239  correct=  0.0%
+  very confident    n=   4370  correct=  0.0%
+
+--- cheat / sac ---
+  very unsure       n=  10556  correct= 44.9%
+  unsure            n=   1174  correct= 64.3%
+  confident         n=    278  correct= 88.8%
+  very confident    n=      3  correct=100.0%
+
+--- no_cheat / dqn ---
+  very unsure       n=  17242  correct= 36.6%
+  unsure            n=   8314  correct= 26.1%
+  confident         n=   1682  correct= 26.9%
+  very confident    n=    207  correct= 61.4%
+
+--- no_cheat / ppo ---
+  very unsure       n=     25  correct= 16.0%
+  unsure            n=     77  correct=  9.1%
+  confident         n=    222  correct=  1.8%
+  very confident    n=  12869  correct=  0.0%
+
+--- no_cheat / a2c ---
+  very unsure       n=    105  correct= 44.8%
+  unsure            n=    429  correct= 10.7%
+  confident         n=    430  correct=  0.7%
+  very confident    n=  22119  correct=  0.1%
+
+--- no_cheat / sac ---
+  very unsure       n=  35283  correct=  6.9%
+  unsure            n=   1419  correct= 28.8%
+  confident         n=    126  correct= 92.9%
+  very confident    n=      7  correct=100.0%
+

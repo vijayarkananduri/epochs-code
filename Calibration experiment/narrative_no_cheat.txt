@@ -1,0 +1,2358 @@
+    dqn ep  200  R=-1.15
+    dqn ep  400  R=-1.96
+    dqn ep  600  R=-1.74
+
+### dqn trained in 147.0s
+
+
+--- Episode 1 (dqn, no_cheat) ---
+
+[000][DQN] I see:    I am on the ground; I am 0% to goal
+         I think:  TOGGLE=+0.34  STAY=+0.31  LEFT=+0.31  RIGHT=+0.31
+         I choose: JUMP  (chose TOGGLE, gap +0.03 over STAY)
+         I'm sure: very unsure  (+0.03)
+         Truth:    WRONG (rule bot would move right)
+
+[001][DQN] I see:    I am in the air; I am 0% to goal
+         I think:  RIGHT=+0.35  STAY=+0.35  LEFT=+0.34  TOGGLE=+0.34
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    CORRECT
+
+[002][DQN] I see:    I am in the air; I am 1% to goal
+         I think:  TOGGLE=+0.38  RIGHT=+0.38  STAY=+0.37  LEFT=+0.36
+         I choose: LAND  (chose TOGGLE, gap +0.00 over RIGHT)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[003][DQN] I see:    I am on the ground; I am 1% to goal
+         I think:  TOGGLE=+0.41  RIGHT=+0.37  STAY=+0.36  LEFT=+0.36
+         I choose: JUMP  (chose TOGGLE, gap +0.04 over RIGHT)
+         I'm sure: very unsure  (+0.04)
+         Truth:    WRONG (rule bot would move right)
+
+[004][DQN] I see:    I am in the air; I am 1% to goal
+         I think:  RIGHT=+0.41  TOGGLE=+0.41  STAY=+0.40  LEFT=+0.39
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.01 over TOGGLE)
+         I'm sure: very unsure  (+0.01)
+         Truth:    CORRECT
+
+[005][DQN] I see:    I am in the air; I am 2% to goal
+         I think:  TOGGLE=+0.44  RIGHT=+0.43  STAY=+0.42  LEFT=+0.40
+         I choose: LAND  (chose TOGGLE, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[006][DQN] I see:    a slow beam is coming from behind in 2.0s; I am on the ground; I am 2% to goal
+         I think:  RIGHT=+0.47  TOGGLE=+0.47  STAY=+0.44  LEFT=+0.40
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.00 over TOGGLE)
+         I'm sure: very unsure  (+0.00)
+         Truth:    CORRECT
+
+[007][DQN] I see:    a slow beam is coming from behind in 1.9s; I am on the ground; I am 3% to goal
+         I think:  RIGHT=+0.50  TOGGLE=+0.50  STAY=+0.47  LEFT=+0.42
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.00 over TOGGLE)
+         I'm sure: very unsure  (+0.00)
+         Truth:    CORRECT
+
+[008][DQN] I see:    a slow beam is coming from behind in 1.8s; I am on the ground; I am 4% to goal
+         I think:  RIGHT=+0.53  TOGGLE=+0.53  STAY=+0.50  LEFT=+0.45
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.01 over TOGGLE)
+         I'm sure: very unsure  (+0.01)
+         Truth:    CORRECT
+
+[009][DQN] I see:    a slow beam is coming from behind in 1.7s; I am on the ground; I am 6% to goal
+         I think:  RIGHT=+0.56  TOGGLE=+0.55  STAY=+0.53  LEFT=+0.48
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.01 over TOGGLE)
+         I'm sure: very unsure  (+0.01)
+         Truth:    CORRECT
+
+[010][DQN] I see:    a slow beam is coming from behind in 1.6s; I am on the ground; I am 7% to goal
+         I think:  RIGHT=+0.59  TOGGLE=+0.59  STAY=+0.57  LEFT=+0.51
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.00 over TOGGLE)
+         I'm sure: very unsure  (+0.00)
+         Truth:    CORRECT
+
+[011][DQN] I see:    a slow beam is coming from behind in 1.5s; I am on the ground; I am 8% to goal
+         I think:  RIGHT=+0.62  TOGGLE=+0.62  STAY=+0.60  LEFT=+0.53
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.00 over TOGGLE)
+         I'm sure: very unsure  (+0.00)
+         Truth:    CORRECT
+
+[012][DQN] I see:    a slow beam is coming from behind in 1.4s; I am on the ground; I am 9% to goal
+         I think:  TOGGLE=+0.65  RIGHT=+0.65  STAY=+0.64  LEFT=+0.55
+         I choose: JUMP  (chose TOGGLE, gap +0.00 over RIGHT)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[013][DQN] I see:    a slow beam is coming from behind in 1.3s; I am in the air; I am 9% to goal
+         I think:  RIGHT=+0.69  STAY=+0.67  LEFT=+0.64  TOGGLE=+0.62
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.02 over STAY)
+         I'm sure: very unsure  (+0.02)
+         Truth:    CORRECT
+
+[014][DQN] I see:    a slow beam is coming from behind in 1.2s; I am in the air; I am 10% to goal
+         I think:  RIGHT=+0.72  STAY=+0.70  LEFT=+0.67  TOGGLE=+0.65
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.02 over STAY)
+         I'm sure: very unsure  (+0.02)
+         Truth:    CORRECT
+
+[015][DQN] I see:    a slow beam is coming from behind in 1.1s; I am in the air; I am 11% to goal
+         I think:  RIGHT=+0.75  STAY=+0.73  LEFT=+0.70  TOGGLE=+0.68
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.02 over STAY)
+         I'm sure: very unsure  (+0.02)
+         Truth:    CORRECT
+
+[016][DQN] I see:    a slow beam is coming from behind in 1.0s; I am in the air; I am 13% to goal
+         I think:  RIGHT=+0.78  STAY=+0.76  LEFT=+0.72  TOGGLE=+0.71
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    CORRECT
+
+[017][DQN] I see:    a slow beam is coming from behind in 0.9s; I am in the air; I am 14% to goal
+         I think:  RIGHT=+0.81  STAY=+0.79  LEFT=+0.75  TOGGLE=+0.74
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    CORRECT
+
+[018][DQN] I see:    a slow beam is coming from behind in 0.8s; I am in the air; I am 15% to goal
+         I think:  RIGHT=+0.84  STAY=+0.82  LEFT=+0.77  TOGGLE=+0.77
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    CORRECT
+
+[019][DQN] I see:    a slow beam is coming from behind in 0.7s; I am in the air; I am 16% to goal
+         I think:  RIGHT=+0.86  STAY=+0.85  LEFT=+0.80  TOGGLE=+0.79
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    CORRECT
+
+[020][DQN] I see:    a slow beam is coming from behind in 0.6s; I am in the air; I am 18% to goal
+         I think:  RIGHT=+0.89  STAY=+0.88  TOGGLE=+0.83  LEFT=+0.83
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    CORRECT
+
+[021][DQN] I see:    a slow beam is coming from behind in 0.5s; I am in the air; I am 19% to goal
+         I think:  RIGHT=+0.92  STAY=+0.91  TOGGLE=+0.86  LEFT=+0.86
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would land)
+
+[022][DQN] I see:    a slow beam is coming from behind in 0.4s; I am in the air; I am 20% to goal
+         I think:  RIGHT=+0.94  STAY=+0.94  TOGGLE=+0.90  LEFT=+0.89
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would land)
+
+[023][DQN] I see:    a slow beam is coming from behind in 0.3s; I am in the air; I am 21% to goal
+         I think:  RIGHT=+0.95  STAY=+0.95  TOGGLE=+0.92  LEFT=+0.90
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would land)
+
+[024][DQN] I see:    a slow beam is coming from behind in 0.2s; I am in the air; I am 22% to goal
+         I think:  RIGHT=+0.97  STAY=+0.97  TOGGLE=+0.95  LEFT=+0.92
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would land)
+
+[025][DQN] I see:    a slow beam is coming from behind in 0.1s; I am in the air; I am 24% to goal
+         I think:  RIGHT=+0.99  STAY=+0.98  TOGGLE=+0.98  LEFT=+0.95
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would land)
+
+[026][DQN] I see:    back_overhead_beam moving toward me; I am in the air; I am 25% to goal
+         I think:  RIGHT=+0.99  STAY=+0.94  TOGGLE=+0.88  LEFT=+0.85
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.04 over STAY)
+         I'm sure: very unsure  (+0.04)
+         Truth:    CORRECT
+
+[027][DQN] I see:    back_overhead_beam moving toward me; I am in the air; I am 26% to goal
+         I think:  RIGHT=+0.99  STAY=+0.95  TOGGLE=+0.87  LEFT=+0.84
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.04 over STAY)
+         I'm sure: very unsure  (+0.04)
+         Truth:    CORRECT
+
+[028][DQN] I see:    back_overhead_beam moving toward me; I am in the air; I am 27% to goal
+         I think:  RIGHT=+0.99  STAY=+0.96  TOGGLE=+0.85  LEFT=+0.84
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.04 over STAY)
+         I'm sure: very unsure  (+0.04)
+         Truth:    CORRECT
+
+[029][DQN] I see:    back_overhead_beam moving toward me; I am in the air; I am 28% to goal
+         I think:  RIGHT=+1.00  STAY=+0.97  LEFT=+0.84  TOGGLE=+0.84
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.03 over STAY)
+         I'm sure: very unsure  (+0.03)
+         Truth:    CORRECT
+
+[030][DQN] I see:    back_overhead_beam moving toward me; I am in the air; I am 30% to goal
+         I think:  RIGHT=+1.00  STAY=+0.98  LEFT=+0.84  TOGGLE=+0.82
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.02 over STAY)
+         I'm sure: very unsure  (+0.02)
+         Truth:    CORRECT
+
+[031][DQN] I see:    back_overhead_beam moving toward me; I am in the air; I am 31% to goal
+         I think:  RIGHT=+1.00  STAY=+0.99  LEFT=+0.84  TOGGLE=+0.81
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    CORRECT
+
+[032][DQN] I see:    a spike on the ground is chasing me in 2.0s; back_overhead_beam moving toward me; I am in the air; I am 32% to goal
+         I think:  TOGGLE=+1.36  LEFT=+1.35  STAY=+1.23  RIGHT=+1.13
+         I choose: LAND  (chose TOGGLE, gap +0.00 over LEFT)
+         I'm sure: very unsure  (+0.00)
+         Truth:    CORRECT
+
+[033][DQN] I see:    a spike on the ground is chasing me in 1.9s; back_overhead_beam moving toward me; I am on the ground; I am 32% to goal
+         I think:  RIGHT=+1.20  TOGGLE=+1.12  LEFT=+1.07  STAY=+1.07
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.08 over TOGGLE)
+         I'm sure: unsure  (+0.08)
+         Truth:    CORRECT
+
+[034][DQN] I see:    a spike on the ground is chasing me in 1.8s; back_overhead_beam moving toward me; I am on the ground; I am 33% to goal
+         I think:  RIGHT=+1.18  TOGGLE=+1.12  STAY=+1.06  LEFT=+1.06
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.06 over TOGGLE)
+         I'm sure: unsure  (+0.06)
+         Truth:    CORRECT
+
+[035][DQN] I see:    a spike on the ground is chasing me in 1.7s; back_overhead_beam moving toward me; I am on the ground; I am 34% to goal
+         I think:  RIGHT=+1.16  TOGGLE=+1.12  STAY=+1.05  LEFT=+1.05
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.04 over TOGGLE)
+         I'm sure: very unsure  (+0.04)
+         Truth:    CORRECT
+
+[036][DQN] I see:    a spike on the ground is chasing me in 1.6s; back_overhead_beam moving toward me; I am on the ground; I am 36% to goal
+         I think:  RIGHT=+1.13  TOGGLE=+1.12  STAY=+1.03  LEFT=+1.03
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.01 over TOGGLE)
+         I'm sure: very unsure  (+0.01)
+         Truth:    CORRECT
+
+[037][DQN] I see:    a spike on the ground is chasing me in 1.5s; back_overhead_beam moving toward me; I am on the ground; I am 37% to goal
+         I think:  TOGGLE=+1.12  RIGHT=+1.10  STAY=+1.01  LEFT=+1.00
+         I choose: JUMP  (chose TOGGLE, gap +0.02 over RIGHT)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[038][DQN] I see:    a spike on the ground is chasing me in 1.4s; back_overhead_beam moving toward me; I am in the air; I am 37% to goal
+         I think:  TOGGLE=+1.37  LEFT=+1.31  RIGHT=+1.09  STAY=+1.06
+         I choose: LAND  (chose TOGGLE, gap +0.06 over LEFT)
+         I'm sure: unsure  (+0.06)
+         Truth:    CORRECT
+
+[039][DQN] I see:    a spike on the ground is chasing me in 1.3s; back_overhead_beam moving toward me; I am on the ground; I am 37% to goal
+         I think:  TOGGLE=+1.10  RIGHT=+1.05  STAY=+0.97  LEFT=+0.96
+         I choose: JUMP  (chose TOGGLE, gap +0.05 over RIGHT)
+         I'm sure: very unsure  (+0.05)
+         Truth:    WRONG (rule bot would move right)
+
+[040][DQN] I see:    a spike on the ground is chasing me in 1.2s; back_overhead_beam moving toward me; I am in the air; I am 37% to goal
+         I think:  TOGGLE=+1.32  LEFT=+1.29  RIGHT=+1.08  STAY=+0.98
+         I choose: LAND  (chose TOGGLE, gap +0.03 over LEFT)
+         I'm sure: very unsure  (+0.03)
+         Truth:    CORRECT
+
+[041][DQN] I see:    a spike on the ground is chasing me in 1.1s; back_overhead_beam moving toward me; I am on the ground; I am 37% to goal
+         I think:  TOGGLE=+1.13  RIGHT=+1.01  LEFT=+0.96  STAY=+0.95
+         I choose: JUMP  (chose TOGGLE, gap +0.12 over RIGHT)
+         I'm sure: unsure  (+0.12)
+         Truth:    WRONG (rule bot would move right)
+
+--- Ended: hit_3 after 42 steps ---
+
+### dqn overall correct=0.330 win=0.000
+    ppo ep  200  R=-1.49
+    ppo ep  400  R=-1.16
+    ppo ep  600  R=-1.28
+
+### ppo trained in 53.8s
+
+
+--- Episode 1 (ppo, no_cheat) ---
+
+[000][PPO] I see:    I am on the ground; I am 0% to goal
+         I think:  STAY=+2.50  LEFT=+0.66  TOGGLE=-1.10  RIGHT=-2.03
+         I choose: STAY STILL  (chose STAY, gap +1.84 over LEFT)
+         I'm sure: very confident  (+1.84)
+         Truth:    WRONG (rule bot would move right)
+
+[001][PPO] I see:    I am on the ground; I am 0% to goal
+         I think:  STAY=+2.51  LEFT=+0.65  TOGGLE=-1.09  RIGHT=-2.04
+         I choose: STAY STILL  (chose STAY, gap +1.86 over LEFT)
+         I'm sure: very confident  (+1.86)
+         Truth:    WRONG (rule bot would move right)
+
+[002][PPO] I see:    I am on the ground; I am 0% to goal
+         I think:  STAY=+2.51  LEFT=+0.64  TOGGLE=-1.08  RIGHT=-2.06
+         I choose: STAY STILL  (chose STAY, gap +1.87 over LEFT)
+         I'm sure: very confident  (+1.87)
+         Truth:    WRONG (rule bot would move right)
+
+[003][PPO] I see:    I am on the ground; I am 0% to goal
+         I think:  STAY=+2.52  LEFT=+0.63  TOGGLE=-1.07  RIGHT=-2.07
+         I choose: STAY STILL  (chose STAY, gap +1.89 over LEFT)
+         I'm sure: very confident  (+1.89)
+         Truth:    WRONG (rule bot would move right)
+
+[004][PPO] I see:    I am on the ground; I am 0% to goal
+         I think:  STAY=+2.52  LEFT=+0.62  TOGGLE=-1.05  RIGHT=-2.08
+         I choose: STAY STILL  (chose STAY, gap +1.91 over LEFT)
+         I'm sure: very confident  (+1.91)
+         Truth:    WRONG (rule bot would move right)
+
+[005][PPO] I see:    I am on the ground; I am 0% to goal
+         I think:  STAY=+2.53  LEFT=+0.61  TOGGLE=-1.04  RIGHT=-2.09
+         I choose: STAY STILL  (chose STAY, gap +1.92 over LEFT)
+         I'm sure: very confident  (+1.92)
+         Truth:    WRONG (rule bot would move right)
+
+[006][PPO] I see:    a slow beam is coming from behind in 2.0s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.53  TOGGLE=+1.04  LEFT=-0.54  RIGHT=-3.41
+         I choose: STAY STILL  (chose STAY, gap +1.48 over TOGGLE)
+         I'm sure: very confident  (+1.48)
+         Truth:    WRONG (rule bot would move right)
+
+[007][PPO] I see:    a slow beam is coming from behind in 1.9s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.53  TOGGLE=+1.06  LEFT=-0.55  RIGHT=-3.42
+         I choose: STAY STILL  (chose STAY, gap +1.48 over TOGGLE)
+         I'm sure: very confident  (+1.48)
+         Truth:    WRONG (rule bot would move right)
+
+[008][PPO] I see:    a slow beam is coming from behind in 1.8s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.54  TOGGLE=+1.07  LEFT=-0.56  RIGHT=-3.43
+         I choose: STAY STILL  (chose STAY, gap +1.47 over TOGGLE)
+         I'm sure: very confident  (+1.47)
+         Truth:    WRONG (rule bot would move right)
+
+[009][PPO] I see:    a slow beam is coming from behind in 1.7s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.54  TOGGLE=+1.08  LEFT=-0.57  RIGHT=-3.45
+         I choose: STAY STILL  (chose STAY, gap +1.46 over TOGGLE)
+         I'm sure: very confident  (+1.46)
+         Truth:    WRONG (rule bot would move right)
+
+[010][PPO] I see:    a slow beam is coming from behind in 1.6s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.55  TOGGLE=+1.09  LEFT=-0.58  RIGHT=-3.46
+         I choose: STAY STILL  (chose STAY, gap +1.45 over TOGGLE)
+         I'm sure: very confident  (+1.45)
+         Truth:    WRONG (rule bot would move right)
+
+[011][PPO] I see:    a slow beam is coming from behind in 1.5s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.55  TOGGLE=+1.11  LEFT=-0.59  RIGHT=-3.47
+         I choose: STAY STILL  (chose STAY, gap +1.45 over TOGGLE)
+         I'm sure: very confident  (+1.45)
+         Truth:    WRONG (rule bot would move right)
+
+[012][PPO] I see:    a slow beam is coming from behind in 1.4s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.56  TOGGLE=+1.12  LEFT=-0.60  RIGHT=-3.48
+         I choose: STAY STILL  (chose STAY, gap +1.44 over TOGGLE)
+         I'm sure: very confident  (+1.44)
+         Truth:    WRONG (rule bot would move right)
+
+[013][PPO] I see:    a slow beam is coming from behind in 1.3s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.56  TOGGLE=+1.13  LEFT=-0.61  RIGHT=-3.49
+         I choose: STAY STILL  (chose STAY, gap +1.43 over TOGGLE)
+         I'm sure: very confident  (+1.43)
+         Truth:    WRONG (rule bot would move right)
+
+[014][PPO] I see:    a slow beam is coming from behind in 1.2s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.57  TOGGLE=+1.14  LEFT=-0.62  RIGHT=-3.51
+         I choose: STAY STILL  (chose STAY, gap +1.43 over TOGGLE)
+         I'm sure: very confident  (+1.43)
+         Truth:    WRONG (rule bot would move right)
+
+[015][PPO] I see:    a slow beam is coming from behind in 1.1s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.57  TOGGLE=+1.15  LEFT=-0.63  RIGHT=-3.52
+         I choose: STAY STILL  (chose STAY, gap +1.42 over TOGGLE)
+         I'm sure: very confident  (+1.42)
+         Truth:    WRONG (rule bot would move right)
+
+[016][PPO] I see:    a slow beam is coming from behind in 1.0s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.58  TOGGLE=+1.16  LEFT=-0.64  RIGHT=-3.53
+         I choose: STAY STILL  (chose STAY, gap +1.42 over TOGGLE)
+         I'm sure: very confident  (+1.42)
+         Truth:    WRONG (rule bot would move right)
+
+[017][PPO] I see:    a slow beam is coming from behind in 0.9s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.59  TOGGLE=+1.17  LEFT=-0.65  RIGHT=-3.54
+         I choose: STAY STILL  (chose STAY, gap +1.41 over TOGGLE)
+         I'm sure: very confident  (+1.41)
+         Truth:    WRONG (rule bot would move right)
+
+[018][PPO] I see:    a slow beam is coming from behind in 0.8s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.59  TOGGLE=+1.18  LEFT=-0.66  RIGHT=-3.55
+         I choose: STAY STILL  (chose STAY, gap +1.41 over TOGGLE)
+         I'm sure: very confident  (+1.41)
+         Truth:    WRONG (rule bot would move right)
+
+[019][PPO] I see:    a slow beam is coming from behind in 0.7s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.60  TOGGLE=+1.19  LEFT=-0.67  RIGHT=-3.57
+         I choose: STAY STILL  (chose STAY, gap +1.40 over TOGGLE)
+         I'm sure: very confident  (+1.40)
+         Truth:    WRONG (rule bot would move right)
+
+[020][PPO] I see:    a slow beam is coming from behind in 0.6s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.60  TOGGLE=+1.21  LEFT=-0.68  RIGHT=-3.58
+         I choose: STAY STILL  (chose STAY, gap +1.40 over TOGGLE)
+         I'm sure: very confident  (+1.40)
+         Truth:    WRONG (rule bot would move right)
+
+[021][PPO] I see:    a slow beam is coming from behind in 0.5s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.61  TOGGLE=+1.22  LEFT=-0.69  RIGHT=-3.59
+         I choose: STAY STILL  (chose STAY, gap +1.39 over TOGGLE)
+         I'm sure: very confident  (+1.39)
+         Truth:    WRONG (rule bot would move right)
+
+[022][PPO] I see:    a slow beam is coming from behind in 0.4s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.61  TOGGLE=+1.23  LEFT=-0.70  RIGHT=-3.60
+         I choose: STAY STILL  (chose STAY, gap +1.39 over TOGGLE)
+         I'm sure: very confident  (+1.39)
+         Truth:    WRONG (rule bot would move right)
+
+[023][PPO] I see:    a slow beam is coming from behind in 0.3s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.62  TOGGLE=+1.24  LEFT=-0.71  RIGHT=-3.61
+         I choose: STAY STILL  (chose STAY, gap +1.38 over TOGGLE)
+         I'm sure: very confident  (+1.38)
+         Truth:    WRONG (rule bot would move right)
+
+[024][PPO] I see:    a slow beam is coming from behind in 0.2s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.62  TOGGLE=+1.25  LEFT=-0.72  RIGHT=-3.63
+         I choose: STAY STILL  (chose STAY, gap +1.38 over TOGGLE)
+         I'm sure: very confident  (+1.38)
+         Truth:    WRONG (rule bot would move right)
+
+[025][PPO] I see:    a slow beam is coming from behind in 0.1s; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.63  TOGGLE=+1.26  LEFT=-0.73  RIGHT=-3.64
+         I choose: STAY STILL  (chose STAY, gap +1.37 over TOGGLE)
+         I'm sure: very confident  (+1.37)
+         Truth:    WRONG (rule bot would move right)
+
+[026][PPO] I see:    I am on the ground; I am 0% to goal
+         I think:  STAY=+2.65  LEFT=+0.37  TOGGLE=-0.76  RIGHT=-2.37
+         I choose: STAY STILL  (chose STAY, gap +2.28 over LEFT)
+         I'm sure: very confident  (+2.28)
+         Truth:    WRONG (rule bot would move right)
+
+[027][PPO] I see:    I am on the ground; I am 0% to goal
+         I think:  STAY=+2.65  LEFT=+0.36  TOGGLE=-0.75  RIGHT=-2.38
+         I choose: STAY STILL  (chose STAY, gap +2.30 over LEFT)
+         I'm sure: very confident  (+2.30)
+         Truth:    WRONG (rule bot would move right)
+
+[028][PPO] I see:    I am on the ground; I am 0% to goal
+         I think:  STAY=+2.66  LEFT=+0.34  TOGGLE=-0.73  RIGHT=-2.40
+         I choose: STAY STILL  (chose STAY, gap +2.31 over LEFT)
+         I'm sure: very confident  (+2.31)
+         Truth:    WRONG (rule bot would move right)
+
+[029][PPO] I see:    I am on the ground; I am 0% to goal
+         I think:  STAY=+2.66  LEFT=+0.33  TOGGLE=-0.72  RIGHT=-2.41
+         I choose: STAY STILL  (chose STAY, gap +2.33 over LEFT)
+         I'm sure: very confident  (+2.33)
+         Truth:    WRONG (rule bot would move right)
+
+[030][PPO] I see:    I am on the ground; I am 0% to goal
+         I think:  STAY=+2.67  LEFT=+0.32  TOGGLE=-0.71  RIGHT=-2.43
+         I choose: STAY STILL  (chose STAY, gap +2.35 over LEFT)
+         I'm sure: very confident  (+2.35)
+         Truth:    WRONG (rule bot would move right)
+
+[031][PPO] I see:    I am on the ground; I am 0% to goal
+         I think:  STAY=+2.68  LEFT=+0.31  TOGGLE=-0.69  RIGHT=-2.44
+         I choose: STAY STILL  (chose STAY, gap +2.37 over LEFT)
+         I'm sure: very confident  (+2.37)
+         Truth:    WRONG (rule bot would move right)
+
+[032][PPO] I see:    a spike on the ground is chasing me in 2.0s; I am on the ground; I am 0% to goal
+         I think:  STAY=+3.99  TOGGLE=+1.52  LEFT=-1.52  RIGHT=-5.06
+         I choose: STAY STILL  (chose STAY, gap +2.47 over TOGGLE)
+         I'm sure: very confident  (+2.47)
+         Truth:    WRONG (rule bot would move right)
+
+[033][PPO] I see:    a spike on the ground is chasing me in 1.9s; I am on the ground; I am 0% to goal
+         I think:  STAY=+3.99  TOGGLE=+1.53  LEFT=-1.53  RIGHT=-5.07
+         I choose: STAY STILL  (chose STAY, gap +2.46 over TOGGLE)
+         I'm sure: very confident  (+2.46)
+         Truth:    WRONG (rule bot would move right)
+
+[034][PPO] I see:    a spike on the ground is chasing me in 1.8s; I am on the ground; I am 0% to goal
+         I think:  STAY=+4.00  TOGGLE=+1.54  LEFT=-1.54  RIGHT=-5.09
+         I choose: STAY STILL  (chose STAY, gap +2.46 over TOGGLE)
+         I'm sure: very confident  (+2.46)
+         Truth:    WRONG (rule bot would move right)
+
+[035][PPO] I see:    a spike on the ground is chasing me in 1.7s; I am on the ground; I am 0% to goal
+         I think:  STAY=+4.01  TOGGLE=+1.56  LEFT=-1.56  RIGHT=-5.10
+         I choose: STAY STILL  (chose STAY, gap +2.45 over TOGGLE)
+         I'm sure: very confident  (+2.45)
+         Truth:    WRONG (rule bot would move right)
+
+[036][PPO] I see:    a spike on the ground is chasing me in 1.6s; I am on the ground; I am 0% to goal
+         I think:  STAY=+4.01  TOGGLE=+1.57  LEFT=-1.57  RIGHT=-5.11
+         I choose: STAY STILL  (chose STAY, gap +2.44 over TOGGLE)
+         I'm sure: very confident  (+2.44)
+         Truth:    WRONG (rule bot would move right)
+
+[037][PPO] I see:    a spike on the ground is chasing me in 1.5s; I am on the ground; I am 0% to goal
+         I think:  STAY=+4.02  TOGGLE=+1.58  LEFT=-1.58  RIGHT=-5.13
+         I choose: STAY STILL  (chose STAY, gap +2.44 over TOGGLE)
+         I'm sure: very confident  (+2.44)
+         Truth:    WRONG (rule bot would move right)
+
+[038][PPO] I see:    a spike on the ground is chasing me in 1.4s; I am on the ground; I am 0% to goal
+         I think:  STAY=+4.02  TOGGLE=+1.59  LEFT=-1.59  RIGHT=-5.14
+         I choose: STAY STILL  (chose STAY, gap +2.43 over TOGGLE)
+         I'm sure: very confident  (+2.43)
+         Truth:    WRONG (rule bot would move right)
+
+[039][PPO] I see:    a spike on the ground is chasing me in 1.3s; I am on the ground; I am 0% to goal
+         I think:  STAY=+4.03  TOGGLE=+1.60  LEFT=-1.60  RIGHT=-5.15
+         I choose: STAY STILL  (chose STAY, gap +2.42 over TOGGLE)
+         I'm sure: very confident  (+2.42)
+         Truth:    WRONG (rule bot would move right)
+
+[040][PPO] I see:    a spike on the ground is chasing me in 1.2s; I am on the ground; I am 0% to goal
+         I think:  STAY=+4.03  TOGGLE=+1.62  LEFT=-1.61  RIGHT=-5.17
+         I choose: STAY STILL  (chose STAY, gap +2.42 over TOGGLE)
+         I'm sure: very confident  (+2.42)
+         Truth:    WRONG (rule bot would move right)
+
+[041][PPO] I see:    a spike on the ground is chasing me in 1.1s; I am on the ground; I am 0% to goal
+         I think:  STAY=+4.04  TOGGLE=+1.63  LEFT=-1.62  RIGHT=-5.18
+         I choose: STAY STILL  (chose STAY, gap +2.41 over TOGGLE)
+         I'm sure: very confident  (+2.41)
+         Truth:    WRONG (rule bot would move right)
+
+[042][PPO] I see:    a spike on the ground is chasing me in 1.0s; I am on the ground; I am 0% to goal
+         I think:  STAY=+4.05  TOGGLE=+1.64  LEFT=-1.63  RIGHT=-5.19
+         I choose: STAY STILL  (chose STAY, gap +2.41 over TOGGLE)
+         I'm sure: very confident  (+2.41)
+         Truth:    WRONG (rule bot would move right)
+
+[043][PPO] I see:    a spike on the ground is chasing me in 0.9s; I am on the ground; I am 0% to goal
+         I think:  STAY=+4.05  TOGGLE=+1.65  LEFT=-1.64  RIGHT=-5.20
+         I choose: STAY STILL  (chose STAY, gap +2.40 over TOGGLE)
+         I'm sure: very confident  (+2.40)
+         Truth:    WRONG (rule bot would move right)
+
+[044][PPO] I see:    a spike on the ground is chasing me in 0.8s; I am on the ground; I am 0% to goal
+         I think:  STAY=+4.06  TOGGLE=+1.67  LEFT=-1.65  RIGHT=-5.22
+         I choose: STAY STILL  (chose STAY, gap +2.39 over TOGGLE)
+         I'm sure: very confident  (+2.39)
+         Truth:    WRONG (rule bot would move right)
+
+[045][PPO] I see:    a spike on the ground is chasing me in 0.7s; I am on the ground; I am 0% to goal
+         I think:  STAY=+4.06  TOGGLE=+1.68  LEFT=-1.66  RIGHT=-5.23
+         I choose: STAY STILL  (chose STAY, gap +2.39 over TOGGLE)
+         I'm sure: very confident  (+2.39)
+         Truth:    WRONG (rule bot would move right)
+
+[046][PPO] I see:    a spike on the ground is chasing me in 0.6s; I am on the ground; I am 0% to goal
+         I think:  STAY=+4.07  TOGGLE=+1.69  LEFT=-1.67  RIGHT=-5.24
+         I choose: STAY STILL  (chose STAY, gap +2.38 over TOGGLE)
+         I'm sure: very confident  (+2.38)
+         Truth:    WRONG (rule bot would move right)
+
+[047][PPO] I see:    a spike on the ground is chasing me in 0.5s; I am on the ground; I am 0% to goal
+         I think:  STAY=+4.08  TOGGLE=+1.70  LEFT=-1.68  RIGHT=-5.26
+         I choose: STAY STILL  (chose STAY, gap +2.38 over TOGGLE)
+         I'm sure: very confident  (+2.38)
+         Truth:    WRONG (rule bot would jump)
+
+[048][PPO] I see:    a spike on the ground is chasing me in 0.4s; I am on the ground; I am 0% to goal
+         I think:  STAY=+4.08  TOGGLE=+1.71  LEFT=-1.69  RIGHT=-5.27
+         I choose: STAY STILL  (chose STAY, gap +2.37 over TOGGLE)
+         I'm sure: very confident  (+2.37)
+         Truth:    WRONG (rule bot would jump)
+
+[049][PPO] I see:    a spike on the ground is chasing me in 0.3s; I am on the ground; I am 0% to goal
+         I think:  STAY=+4.09  TOGGLE=+1.73  LEFT=-1.70  RIGHT=-5.28
+         I choose: STAY STILL  (chose STAY, gap +2.36 over TOGGLE)
+         I'm sure: very confident  (+2.36)
+         Truth:    WRONG (rule bot would jump)
+
+[050][PPO] I see:    a spike on the ground is chasing me in 0.2s; I am on the ground; I am 0% to goal
+         I think:  STAY=+4.10  TOGGLE=+1.74  LEFT=-1.71  RIGHT=-5.30
+         I choose: STAY STILL  (chose STAY, gap +2.36 over TOGGLE)
+         I'm sure: very confident  (+2.36)
+         Truth:    WRONG (rule bot would jump)
+
+[051][PPO] I see:    a spike on the ground is chasing me in 0.1s; I am on the ground; I am 0% to goal
+         I think:  STAY=+4.10  TOGGLE=+1.75  LEFT=-1.73  RIGHT=-5.31
+         I choose: STAY STILL  (chose STAY, gap +2.35 over TOGGLE)
+         I'm sure: very confident  (+2.35)
+         Truth:    WRONG (rule bot would jump)
+
+[052][PPO] I see:    back_ground_spike moving toward me; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.90  TOGGLE=+2.27  LEFT=-1.82  RIGHT=-4.34
+         I choose: STAY STILL  (chose STAY, gap +0.63 over TOGGLE)
+         I'm sure: very confident  (+0.63)
+         Truth:    WRONG (rule bot would move right)
+
+[053][PPO] I see:    back_ground_spike moving toward me; I am on the ground; I am 0% to goal
+         I think:  STAY=+2.96  TOGGLE=+2.21  LEFT=-1.81  RIGHT=-4.34
+         I choose: STAY STILL  (chose STAY, gap +0.75 over TOGGLE)
+         I'm sure: very confident  (+0.75)
+         Truth:    WRONG (rule bot would jump)
+
+[054][PPO] I see:    back_ground_spike moving toward me; I am on the ground; I am 0% to goal
+         I think:  STAY=+3.02  TOGGLE=+2.15  LEFT=-1.79  RIGHT=-4.35
+         I choose: STAY STILL  (chose STAY, gap +0.87 over TOGGLE)
+         I'm sure: very confident  (+0.87)
+         Truth:    WRONG (rule bot would jump)
+
+[055][PPO] I see:    back_ground_spike moving toward me; I am on the ground; I am 0% to goal
+         I think:  STAY=+3.09  TOGGLE=+2.09  LEFT=-1.77  RIGHT=-4.36
+         I choose: STAY STILL  (chose STAY, gap +1.00 over TOGGLE)
+         I'm sure: very confident  (+1.00)
+         Truth:    WRONG (rule bot would jump)
+
+--- Ended: hit_2 after 56 steps ---
+
+### ppo overall correct=0.001 win=0.000
+    a2c ep  200  R=-1.17
+    a2c ep  400  R=-1.32
+    a2c ep  600  R=-1.49
+
+### a2c trained in 14.1s
+
+
+--- Episode 1 (a2c, no_cheat) ---
+
+[000][A2C] I see:    I am on the ground; I am 0% to goal
+         I think:  TOGGLE=+0.73  LEFT=+0.06  STAY=-0.15  RIGHT=-0.78
+         I choose: JUMP  (chose TOGGLE, gap +0.66 over LEFT)
+         I'm sure: very confident  (+0.66)
+         Truth:    WRONG (rule bot would move right)
+
+[001][A2C] I see:    I am in the air; I am 0% to goal
+         I think:  LEFT=+0.97  STAY=-0.03  RIGHT=-0.58  TOGGLE=-0.89
+         I choose: MOVE LEFT  (chose LEFT, gap +1.00 over STAY)
+         I'm sure: very confident  (+1.00)
+         Truth:    WRONG (rule bot would move right)
+
+[002][A2C] I see:    I am in the air; I am 0% to goal
+         I think:  LEFT=+0.97  STAY=-0.03  RIGHT=-0.58  TOGGLE=-0.89
+         I choose: MOVE LEFT  (chose LEFT, gap +1.00 over STAY)
+         I'm sure: very confident  (+1.00)
+         Truth:    WRONG (rule bot would move right)
+
+[003][A2C] I see:    I am in the air; I am 0% to goal
+         I think:  LEFT=+0.97  STAY=-0.03  RIGHT=-0.58  TOGGLE=-0.89
+         I choose: MOVE LEFT  (chose LEFT, gap +1.00 over STAY)
+         I'm sure: very confident  (+1.00)
+         Truth:    WRONG (rule bot would move right)
+
+[004][A2C] I see:    I am in the air; I am 0% to goal
+         I think:  LEFT=+0.97  STAY=-0.03  RIGHT=-0.58  TOGGLE=-0.89
+         I choose: MOVE LEFT  (chose LEFT, gap +1.00 over STAY)
+         I'm sure: very confident  (+1.00)
+         Truth:    WRONG (rule bot would move right)
+
+[005][A2C] I see:    I am in the air; I am 0% to goal
+         I think:  LEFT=+0.97  STAY=-0.03  RIGHT=-0.58  TOGGLE=-0.89
+         I choose: MOVE LEFT  (chose LEFT, gap +1.00 over STAY)
+         I'm sure: very confident  (+1.00)
+         Truth:    WRONG (rule bot would move right)
+
+[006][A2C] I see:    a slow beam is coming from behind in 2.0s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.80  STAY=-0.12  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.92 over STAY)
+         I'm sure: very confident  (+0.92)
+         Truth:    WRONG (rule bot would move right)
+
+[007][A2C] I see:    a slow beam is coming from behind in 1.9s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.80  STAY=-0.12  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.93 over STAY)
+         I'm sure: very confident  (+0.93)
+         Truth:    WRONG (rule bot would move right)
+
+[008][A2C] I see:    a slow beam is coming from behind in 1.8s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.80  STAY=-0.12  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.93 over STAY)
+         I'm sure: very confident  (+0.93)
+         Truth:    WRONG (rule bot would move right)
+
+[009][A2C] I see:    a slow beam is coming from behind in 1.7s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.80  STAY=-0.12  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.93 over STAY)
+         I'm sure: very confident  (+0.93)
+         Truth:    WRONG (rule bot would move right)
+
+[010][A2C] I see:    a slow beam is coming from behind in 1.6s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.80  STAY=-0.13  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.93 over STAY)
+         I'm sure: very confident  (+0.93)
+         Truth:    WRONG (rule bot would move right)
+
+[011][A2C] I see:    a slow beam is coming from behind in 1.5s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.80  STAY=-0.13  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.93 over STAY)
+         I'm sure: very confident  (+0.93)
+         Truth:    WRONG (rule bot would move right)
+
+[012][A2C] I see:    a slow beam is coming from behind in 1.4s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.80  STAY=-0.13  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.93 over STAY)
+         I'm sure: very confident  (+0.93)
+         Truth:    WRONG (rule bot would move right)
+
+[013][A2C] I see:    a slow beam is coming from behind in 1.3s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.80  STAY=-0.13  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.93 over STAY)
+         I'm sure: very confident  (+0.93)
+         Truth:    WRONG (rule bot would move right)
+
+[014][A2C] I see:    a slow beam is coming from behind in 1.2s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.80  STAY=-0.13  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.93 over STAY)
+         I'm sure: very confident  (+0.93)
+         Truth:    WRONG (rule bot would move right)
+
+[015][A2C] I see:    a slow beam is coming from behind in 1.1s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.80  STAY=-0.13  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.93 over STAY)
+         I'm sure: very confident  (+0.93)
+         Truth:    WRONG (rule bot would move right)
+
+[016][A2C] I see:    a slow beam is coming from behind in 1.0s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.80  STAY=-0.13  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.93 over STAY)
+         I'm sure: very confident  (+0.93)
+         Truth:    WRONG (rule bot would move right)
+
+[017][A2C] I see:    a slow beam is coming from behind in 0.9s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.80  STAY=-0.13  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.93 over STAY)
+         I'm sure: very confident  (+0.93)
+         Truth:    WRONG (rule bot would move right)
+
+[018][A2C] I see:    a slow beam is coming from behind in 0.8s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.80  STAY=-0.13  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.93 over STAY)
+         I'm sure: very confident  (+0.93)
+         Truth:    WRONG (rule bot would move right)
+
+[019][A2C] I see:    a slow beam is coming from behind in 0.7s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.80  STAY=-0.13  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.93 over STAY)
+         I'm sure: very confident  (+0.93)
+         Truth:    WRONG (rule bot would move right)
+
+[020][A2C] I see:    a slow beam is coming from behind in 0.6s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.81  STAY=-0.13  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.93 over STAY)
+         I'm sure: very confident  (+0.93)
+         Truth:    WRONG (rule bot would move right)
+
+[021][A2C] I see:    a slow beam is coming from behind in 0.5s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.81  STAY=-0.13  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.93 over STAY)
+         I'm sure: very confident  (+0.93)
+         Truth:    WRONG (rule bot would land)
+
+[022][A2C] I see:    a slow beam is coming from behind in 0.4s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.81  STAY=-0.13  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.93 over STAY)
+         I'm sure: very confident  (+0.93)
+         Truth:    WRONG (rule bot would land)
+
+[023][A2C] I see:    a slow beam is coming from behind in 0.3s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.81  STAY=-0.13  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.94 over STAY)
+         I'm sure: very confident  (+0.94)
+         Truth:    WRONG (rule bot would land)
+
+[024][A2C] I see:    a slow beam is coming from behind in 0.2s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.81  STAY=-0.13  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.94 over STAY)
+         I'm sure: very confident  (+0.94)
+         Truth:    WRONG (rule bot would land)
+
+[025][A2C] I see:    a slow beam is coming from behind in 0.1s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.81  STAY=-0.13  TOGGLE=-0.32  RIGHT=-0.72
+         I choose: MOVE LEFT  (chose LEFT, gap +0.94 over STAY)
+         I'm sure: very confident  (+0.94)
+         Truth:    WRONG (rule bot would land)
+
+[026][A2C] I see:    I am in the air; I am 0% to goal
+         I think:  LEFT=+0.98  STAY=-0.03  RIGHT=-0.57  TOGGLE=-0.91
+         I choose: MOVE LEFT  (chose LEFT, gap +1.01 over STAY)
+         I'm sure: very confident  (+1.01)
+         Truth:    WRONG (rule bot would move right)
+
+[027][A2C] I see:    I am in the air; I am 0% to goal
+         I think:  LEFT=+0.99  STAY=-0.03  RIGHT=-0.57  TOGGLE=-0.91
+         I choose: MOVE LEFT  (chose LEFT, gap +1.02 over STAY)
+         I'm sure: very confident  (+1.02)
+         Truth:    WRONG (rule bot would move right)
+
+[028][A2C] I see:    I am in the air; I am 0% to goal
+         I think:  LEFT=+0.99  STAY=-0.03  RIGHT=-0.57  TOGGLE=-0.91
+         I choose: MOVE LEFT  (chose LEFT, gap +1.02 over STAY)
+         I'm sure: very confident  (+1.02)
+         Truth:    WRONG (rule bot would move right)
+
+[029][A2C] I see:    I am in the air; I am 0% to goal
+         I think:  LEFT=+0.99  STAY=-0.03  RIGHT=-0.57  TOGGLE=-0.91
+         I choose: MOVE LEFT  (chose LEFT, gap +1.02 over STAY)
+         I'm sure: very confident  (+1.02)
+         Truth:    WRONG (rule bot would move right)
+
+[030][A2C] I see:    I am in the air; I am 0% to goal
+         I think:  LEFT=+0.99  STAY=-0.03  RIGHT=-0.57  TOGGLE=-0.91
+         I choose: MOVE LEFT  (chose LEFT, gap +1.02 over STAY)
+         I'm sure: very confident  (+1.02)
+         Truth:    WRONG (rule bot would move right)
+
+[031][A2C] I see:    I am in the air; I am 0% to goal
+         I think:  LEFT=+0.99  STAY=-0.03  RIGHT=-0.57  TOGGLE=-0.91
+         I choose: MOVE LEFT  (chose LEFT, gap +1.02 over STAY)
+         I'm sure: very confident  (+1.02)
+         Truth:    WRONG (rule bot would move right)
+
+[032][A2C] I see:    a spike on the ground is chasing me in 2.0s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.77  STAY=-0.05  TOGGLE=-0.56  RIGHT=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.82 over STAY)
+         I'm sure: very confident  (+0.82)
+         Truth:    WRONG (rule bot would move right)
+
+[033][A2C] I see:    a spike on the ground is chasing me in 1.9s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.78  STAY=-0.05  TOGGLE=-0.56  RIGHT=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.82 over STAY)
+         I'm sure: very confident  (+0.82)
+         Truth:    WRONG (rule bot would move right)
+
+[034][A2C] I see:    a spike on the ground is chasing me in 1.8s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.78  STAY=-0.05  TOGGLE=-0.56  RIGHT=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.82 over STAY)
+         I'm sure: very confident  (+0.82)
+         Truth:    WRONG (rule bot would move right)
+
+[035][A2C] I see:    a spike on the ground is chasing me in 1.7s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.78  STAY=-0.05  TOGGLE=-0.56  RIGHT=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.82 over STAY)
+         I'm sure: very confident  (+0.82)
+         Truth:    WRONG (rule bot would move right)
+
+[036][A2C] I see:    a spike on the ground is chasing me in 1.6s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.78  STAY=-0.05  TOGGLE=-0.56  RIGHT=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.82 over STAY)
+         I'm sure: very confident  (+0.82)
+         Truth:    WRONG (rule bot would move right)
+
+[037][A2C] I see:    a spike on the ground is chasing me in 1.5s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.78  STAY=-0.05  TOGGLE=-0.56  RIGHT=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.82 over STAY)
+         I'm sure: very confident  (+0.82)
+         Truth:    WRONG (rule bot would move right)
+
+[038][A2C] I see:    a spike on the ground is chasing me in 1.4s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.78  STAY=-0.05  TOGGLE=-0.56  RIGHT=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.82 over STAY)
+         I'm sure: very confident  (+0.82)
+         Truth:    WRONG (rule bot would move right)
+
+[039][A2C] I see:    a spike on the ground is chasing me in 1.3s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.78  STAY=-0.05  TOGGLE=-0.56  RIGHT=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.83 over STAY)
+         I'm sure: very confident  (+0.83)
+         Truth:    WRONG (rule bot would move right)
+
+[040][A2C] I see:    a spike on the ground is chasing me in 1.2s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.78  STAY=-0.05  TOGGLE=-0.56  RIGHT=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.83 over STAY)
+         I'm sure: very confident  (+0.83)
+         Truth:    WRONG (rule bot would move right)
+
+[041][A2C] I see:    a spike on the ground is chasing me in 1.1s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.78  STAY=-0.05  TOGGLE=-0.56  RIGHT=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.83 over STAY)
+         I'm sure: very confident  (+0.83)
+         Truth:    WRONG (rule bot would move right)
+
+[042][A2C] I see:    a spike on the ground is chasing me in 1.0s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.78  STAY=-0.05  TOGGLE=-0.56  RIGHT=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.83 over STAY)
+         I'm sure: very confident  (+0.83)
+         Truth:    WRONG (rule bot would move right)
+
+[043][A2C] I see:    a spike on the ground is chasing me in 0.9s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.78  STAY=-0.05  TOGGLE=-0.56  RIGHT=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.83 over STAY)
+         I'm sure: very confident  (+0.83)
+         Truth:    WRONG (rule bot would move right)
+
+[044][A2C] I see:    a spike on the ground is chasing me in 0.8s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.78  STAY=-0.05  RIGHT=-0.56  TOGGLE=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.83 over STAY)
+         I'm sure: very confident  (+0.83)
+         Truth:    WRONG (rule bot would move right)
+
+[045][A2C] I see:    a spike on the ground is chasing me in 0.7s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.78  STAY=-0.05  RIGHT=-0.56  TOGGLE=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.83 over STAY)
+         I'm sure: very confident  (+0.83)
+         Truth:    WRONG (rule bot would move right)
+
+[046][A2C] I see:    a spike on the ground is chasing me in 0.6s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.78  STAY=-0.05  RIGHT=-0.56  TOGGLE=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.83 over STAY)
+         I'm sure: very confident  (+0.83)
+         Truth:    WRONG (rule bot would move right)
+
+[047][A2C] I see:    a spike on the ground is chasing me in 0.5s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.78  STAY=-0.05  RIGHT=-0.56  TOGGLE=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.83 over STAY)
+         I'm sure: very confident  (+0.83)
+         Truth:    WRONG (rule bot would move right)
+
+[048][A2C] I see:    a spike on the ground is chasing me in 0.4s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.78  STAY=-0.05  RIGHT=-0.56  TOGGLE=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.83 over STAY)
+         I'm sure: very confident  (+0.83)
+         Truth:    WRONG (rule bot would move right)
+
+[049][A2C] I see:    a spike on the ground is chasing me in 0.3s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.78  STAY=-0.05  RIGHT=-0.56  TOGGLE=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.83 over STAY)
+         I'm sure: very confident  (+0.83)
+         Truth:    WRONG (rule bot would move right)
+
+[050][A2C] I see:    a spike on the ground is chasing me in 0.2s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.78  STAY=-0.05  RIGHT=-0.56  TOGGLE=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.83 over STAY)
+         I'm sure: very confident  (+0.83)
+         Truth:    WRONG (rule bot would move right)
+
+[051][A2C] I see:    a spike on the ground is chasing me in 0.1s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.78  STAY=-0.05  RIGHT=-0.56  TOGGLE=-0.56
+         I choose: MOVE LEFT  (chose LEFT, gap +0.83 over STAY)
+         I'm sure: very confident  (+0.83)
+         Truth:    WRONG (rule bot would move right)
+
+[052][A2C] I see:    back_ground_spike moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.08  STAY=-0.02  RIGHT=-0.65  TOGGLE=-0.94
+         I choose: MOVE LEFT  (chose LEFT, gap +1.10 over STAY)
+         I'm sure: very confident  (+1.10)
+         Truth:    WRONG (rule bot would move right)
+
+[053][A2C] I see:    back_ground_spike moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.10  STAY=-0.01  RIGHT=-0.64  TOGGLE=-0.98
+         I choose: MOVE LEFT  (chose LEFT, gap +1.11 over STAY)
+         I'm sure: very confident  (+1.11)
+         Truth:    WRONG (rule bot would move right)
+
+[054][A2C] I see:    back_ground_spike moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.12  STAY=-0.01  RIGHT=-0.64  TOGGLE=-1.02
+         I choose: MOVE LEFT  (chose LEFT, gap +1.13 over STAY)
+         I'm sure: very confident  (+1.13)
+         Truth:    WRONG (rule bot would move right)
+
+[055][A2C] I see:    back_ground_spike moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.15  STAY=-0.00  RIGHT=-0.63  TOGGLE=-1.05
+         I choose: MOVE LEFT  (chose LEFT, gap +1.15 over STAY)
+         I'm sure: very confident  (+1.15)
+         Truth:    WRONG (rule bot would move right)
+
+[056][A2C] I see:    I am in the air; I am 0% to goal
+         I think:  LEFT=+1.17  STAY=+0.00  RIGHT=-0.63  TOGGLE=-1.08
+         I choose: MOVE LEFT  (chose LEFT, gap +1.16 over STAY)
+         I'm sure: very confident  (+1.16)
+         Truth:    WRONG (rule bot would move right)
+
+[057][A2C] I see:    I am in the air; I am 0% to goal
+         I think:  LEFT=+1.18  STAY=+0.00  RIGHT=-0.63  TOGGLE=-1.11
+         I choose: MOVE LEFT  (chose LEFT, gap +1.18 over STAY)
+         I'm sure: very confident  (+1.18)
+         Truth:    WRONG (rule bot would move right)
+
+[058][A2C] I see:    I am in the air; I am 0% to goal
+         I think:  LEFT=+1.20  STAY=+0.01  RIGHT=-0.63  TOGGLE=-1.12
+         I choose: MOVE LEFT  (chose LEFT, gap +1.19 over STAY)
+         I'm sure: very confident  (+1.19)
+         Truth:    WRONG (rule bot would move right)
+
+[059][A2C] I see:    I am in the air; I am 0% to goal
+         I think:  LEFT=+1.21  STAY=+0.01  RIGHT=-0.63  TOGGLE=-1.14
+         I choose: MOVE LEFT  (chose LEFT, gap +1.20 over STAY)
+         I'm sure: very confident  (+1.20)
+         Truth:    WRONG (rule bot would move right)
+
+[060][A2C] I see:    a beam is sweeping overhead in 2.0s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.29  STAY=+0.00  RIGHT=-0.63  TOGGLE=-1.14
+         I choose: MOVE LEFT  (chose LEFT, gap +1.29 over STAY)
+         I'm sure: very confident  (+1.29)
+         Truth:    WRONG (rule bot would move right)
+
+[061][A2C] I see:    a beam is sweeping overhead in 1.9s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.13  STAY=-0.06  RIGHT=-0.62  TOGGLE=-0.89
+         I choose: MOVE LEFT  (chose LEFT, gap +1.18 over STAY)
+         I'm sure: very confident  (+1.18)
+         Truth:    WRONG (rule bot would move right)
+
+[062][A2C] I see:    a beam is sweeping overhead in 1.8s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.13  STAY=-0.06  RIGHT=-0.62  TOGGLE=-0.89
+         I choose: MOVE LEFT  (chose LEFT, gap +1.18 over STAY)
+         I'm sure: very confident  (+1.18)
+         Truth:    WRONG (rule bot would move right)
+
+[063][A2C] I see:    a beam is sweeping overhead in 1.7s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.13  STAY=-0.06  RIGHT=-0.62  TOGGLE=-0.89
+         I choose: MOVE LEFT  (chose LEFT, gap +1.18 over STAY)
+         I'm sure: very confident  (+1.18)
+         Truth:    WRONG (rule bot would move right)
+
+[064][A2C] I see:    a beam is sweeping overhead in 1.6s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.13  STAY=-0.06  RIGHT=-0.62  TOGGLE=-0.89
+         I choose: MOVE LEFT  (chose LEFT, gap +1.18 over STAY)
+         I'm sure: very confident  (+1.18)
+         Truth:    WRONG (rule bot would move right)
+
+[065][A2C] I see:    a beam is sweeping overhead in 1.5s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.13  STAY=-0.06  RIGHT=-0.62  TOGGLE=-0.89
+         I choose: MOVE LEFT  (chose LEFT, gap +1.18 over STAY)
+         I'm sure: very confident  (+1.18)
+         Truth:    WRONG (rule bot would move right)
+
+[066][A2C] I see:    a beam is sweeping overhead in 1.4s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.13  STAY=-0.06  RIGHT=-0.62  TOGGLE=-0.89
+         I choose: MOVE LEFT  (chose LEFT, gap +1.18 over STAY)
+         I'm sure: very confident  (+1.18)
+         Truth:    WRONG (rule bot would move right)
+
+[067][A2C] I see:    a beam is sweeping overhead in 1.3s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.13  STAY=-0.06  RIGHT=-0.62  TOGGLE=-0.89
+         I choose: MOVE LEFT  (chose LEFT, gap +1.19 over STAY)
+         I'm sure: very confident  (+1.19)
+         Truth:    WRONG (rule bot would move right)
+
+[068][A2C] I see:    a beam is sweeping overhead in 1.2s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.13  STAY=-0.06  RIGHT=-0.62  TOGGLE=-0.89
+         I choose: MOVE LEFT  (chose LEFT, gap +1.19 over STAY)
+         I'm sure: very confident  (+1.19)
+         Truth:    WRONG (rule bot would move right)
+
+[069][A2C] I see:    a beam is sweeping overhead in 1.1s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.13  STAY=-0.06  RIGHT=-0.62  TOGGLE=-0.89
+         I choose: MOVE LEFT  (chose LEFT, gap +1.19 over STAY)
+         I'm sure: very confident  (+1.19)
+         Truth:    WRONG (rule bot would move right)
+
+[070][A2C] I see:    a beam is sweeping overhead in 1.0s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.13  STAY=-0.06  RIGHT=-0.61  TOGGLE=-0.89
+         I choose: MOVE LEFT  (chose LEFT, gap +1.19 over STAY)
+         I'm sure: very confident  (+1.19)
+         Truth:    WRONG (rule bot would move right)
+
+[071][A2C] I see:    a beam is sweeping overhead in 0.9s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.13  STAY=-0.06  RIGHT=-0.61  TOGGLE=-0.89
+         I choose: MOVE LEFT  (chose LEFT, gap +1.19 over STAY)
+         I'm sure: very confident  (+1.19)
+         Truth:    WRONG (rule bot would move right)
+
+[072][A2C] I see:    a beam is sweeping overhead in 0.8s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.13  STAY=-0.06  RIGHT=-0.61  TOGGLE=-0.89
+         I choose: MOVE LEFT  (chose LEFT, gap +1.19 over STAY)
+         I'm sure: very confident  (+1.19)
+         Truth:    WRONG (rule bot would move right)
+
+[073][A2C] I see:    a beam is sweeping overhead in 0.7s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.13  STAY=-0.06  RIGHT=-0.61  TOGGLE=-0.89
+         I choose: MOVE LEFT  (chose LEFT, gap +1.19 over STAY)
+         I'm sure: very confident  (+1.19)
+         Truth:    WRONG (rule bot would move right)
+
+[074][A2C] I see:    a beam is sweeping overhead in 0.6s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.13  STAY=-0.06  RIGHT=-0.61  TOGGLE=-0.89
+         I choose: MOVE LEFT  (chose LEFT, gap +1.19 over STAY)
+         I'm sure: very confident  (+1.19)
+         Truth:    WRONG (rule bot would move right)
+
+[075][A2C] I see:    a beam is sweeping overhead in 0.5s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.13  STAY=-0.06  RIGHT=-0.61  TOGGLE=-0.90
+         I choose: MOVE LEFT  (chose LEFT, gap +1.19 over STAY)
+         I'm sure: very confident  (+1.19)
+         Truth:    WRONG (rule bot would land)
+
+[076][A2C] I see:    a beam is sweeping overhead in 0.4s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.13  STAY=-0.06  RIGHT=-0.61  TOGGLE=-0.90
+         I choose: MOVE LEFT  (chose LEFT, gap +1.19 over STAY)
+         I'm sure: very confident  (+1.19)
+         Truth:    WRONG (rule bot would land)
+
+[077][A2C] I see:    a beam is sweeping overhead in 0.3s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.13  STAY=-0.06  RIGHT=-0.61  TOGGLE=-0.90
+         I choose: MOVE LEFT  (chose LEFT, gap +1.19 over STAY)
+         I'm sure: very confident  (+1.19)
+         Truth:    WRONG (rule bot would land)
+
+[078][A2C] I see:    a beam is sweeping overhead in 0.2s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.13  STAY=-0.06  RIGHT=-0.61  TOGGLE=-0.90
+         I choose: MOVE LEFT  (chose LEFT, gap +1.19 over STAY)
+         I'm sure: very confident  (+1.19)
+         Truth:    WRONG (rule bot would land)
+
+[079][A2C] I see:    a beam is sweeping overhead in 0.1s; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.13  STAY=-0.06  RIGHT=-0.61  TOGGLE=-0.90
+         I choose: MOVE LEFT  (chose LEFT, gap +1.19 over STAY)
+         I'm sure: very confident  (+1.19)
+         Truth:    WRONG (rule bot would land)
+
+[080][A2C] I see:    front_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.03  STAY=-0.11  TOGGLE=-0.72  RIGHT=-0.76
+         I choose: MOVE LEFT  (chose LEFT, gap +1.14 over STAY)
+         I'm sure: very confident  (+1.14)
+         Truth:    WRONG (rule bot would move right)
+
+[081][A2C] I see:    front_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.03  STAY=-0.11  TOGGLE=-0.72  RIGHT=-0.76
+         I choose: MOVE LEFT  (chose LEFT, gap +1.14 over STAY)
+         I'm sure: very confident  (+1.14)
+         Truth:    WRONG (rule bot would move right)
+
+[082][A2C] I see:    front_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.03  STAY=-0.12  TOGGLE=-0.72  RIGHT=-0.76
+         I choose: MOVE LEFT  (chose LEFT, gap +1.15 over STAY)
+         I'm sure: very confident  (+1.15)
+         Truth:    WRONG (rule bot would land)
+
+[083][A2C] I see:    front_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.03  STAY=-0.12  TOGGLE=-0.73  RIGHT=-0.75
+         I choose: MOVE LEFT  (chose LEFT, gap +1.15 over STAY)
+         I'm sure: very confident  (+1.15)
+         Truth:    WRONG (rule bot would land)
+
+[084][A2C] I see:    front_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.04  STAY=-0.12  TOGGLE=-0.73  RIGHT=-0.75
+         I choose: MOVE LEFT  (chose LEFT, gap +1.15 over STAY)
+         I'm sure: very confident  (+1.15)
+         Truth:    WRONG (rule bot would land)
+
+[085][A2C] I see:    front_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.04  STAY=-0.12  TOGGLE=-0.73  RIGHT=-0.75
+         I choose: MOVE LEFT  (chose LEFT, gap +1.16 over STAY)
+         I'm sure: very confident  (+1.16)
+         Truth:    WRONG (rule bot would land)
+
+[086][A2C] I see:    front_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+1.04  STAY=-0.12  TOGGLE=-0.74  RIGHT=-0.75
+         I choose: MOVE LEFT  (chose LEFT, gap +1.16 over STAY)
+         I'm sure: very confident  (+1.16)
+         Truth:    WRONG (rule bot would land)
+
+--- Ended: hit_1 after 87 steps ---
+
+### a2c overall correct=0.005 win=0.000
+    sac ep  200  R=-1.50
+    sac ep  400  R=-1.34
+    sac ep  600  R=-1.26
+
+### sac trained in 319.3s
+
+
+--- Episode 1 (sac, no_cheat) ---
+
+[000][SAC] I see:    I am on the ground; I am 0% to goal
+         I think:  STAY=+0.26  LEFT=+0.25  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[001][SAC] I see:    I am on the ground; I am 0% to goal
+         I think:  STAY=+0.26  LEFT=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[002][SAC] I see:    I am on the ground; I am 0% to goal
+         I think:  STAY=+0.26  LEFT=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[003][SAC] I see:    I am on the ground; I am 0% to goal
+         I think:  STAY=+0.26  LEFT=+0.26  TOGGLE=+0.26  RIGHT=+0.25
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[004][SAC] I see:    I am on the ground; I am 0% to goal
+         I think:  STAY=+0.26  TOGGLE=+0.26  LEFT=+0.26  RIGHT=+0.25
+         I choose: STAY STILL  (chose STAY, gap +0.01 over TOGGLE)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[005][SAC] I see:    I am on the ground; I am 0% to goal
+         I think:  STAY=+0.26  TOGGLE=+0.26  LEFT=+0.26  RIGHT=+0.25
+         I choose: STAY STILL  (chose STAY, gap +0.01 over TOGGLE)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[006][SAC] I see:    a slow beam is coming from behind in 2.0s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[007][SAC] I see:    a slow beam is coming from behind in 1.9s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[008][SAC] I see:    a slow beam is coming from behind in 1.8s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[009][SAC] I see:    a slow beam is coming from behind in 1.7s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[010][SAC] I see:    a slow beam is coming from behind in 1.6s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[011][SAC] I see:    a slow beam is coming from behind in 1.5s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[012][SAC] I see:    a slow beam is coming from behind in 1.4s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[013][SAC] I see:    a slow beam is coming from behind in 1.3s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[014][SAC] I see:    a slow beam is coming from behind in 1.2s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[015][SAC] I see:    a slow beam is coming from behind in 1.1s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.25  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[016][SAC] I see:    a slow beam is coming from behind in 1.0s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.25  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[017][SAC] I see:    a slow beam is coming from behind in 0.9s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.25  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[018][SAC] I see:    a slow beam is coming from behind in 0.8s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.25  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[019][SAC] I see:    a slow beam is coming from behind in 0.7s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.25  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[020][SAC] I see:    a slow beam is coming from behind in 0.6s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.25  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[021][SAC] I see:    a slow beam is coming from behind in 0.5s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.25  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[022][SAC] I see:    a slow beam is coming from behind in 0.4s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.25  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[023][SAC] I see:    a slow beam is coming from behind in 0.3s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[024][SAC] I see:    a slow beam is coming from behind in 0.2s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[025][SAC] I see:    a slow beam is coming from behind in 0.1s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  TOGGLE=+0.24  LEFT=+0.24  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.01 over TOGGLE)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[026][SAC] I see:    I am on the ground; I am 0% to goal
+         I think:  TOGGLE=+0.26  STAY=+0.26  LEFT=+0.26  RIGHT=+0.25
+         I choose: JUMP  (chose TOGGLE, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[027][SAC] I see:    I am in the air; I am 0% to goal
+         I think:  TOGGLE=+0.27  STAY=+0.26  LEFT=+0.26  RIGHT=+0.25
+         I choose: LAND  (chose TOGGLE, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[028][SAC] I see:    I am on the ground; I am 0% to goal
+         I think:  TOGGLE=+0.26  STAY=+0.26  LEFT=+0.26  RIGHT=+0.25
+         I choose: JUMP  (chose TOGGLE, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[029][SAC] I see:    I am in the air; I am 0% to goal
+         I think:  TOGGLE=+0.27  STAY=+0.26  LEFT=+0.25  RIGHT=+0.25
+         I choose: LAND  (chose TOGGLE, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[030][SAC] I see:    I am on the ground; I am 0% to goal
+         I think:  TOGGLE=+0.26  STAY=+0.26  LEFT=+0.26  RIGHT=+0.25
+         I choose: JUMP  (chose TOGGLE, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[031][SAC] I see:    I am in the air; I am 0% to goal
+         I think:  TOGGLE=+0.27  STAY=+0.26  LEFT=+0.25  RIGHT=+0.25
+         I choose: LAND  (chose TOGGLE, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[032][SAC] I see:    a spike on the ground is chasing me in 2.0s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.27  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[033][SAC] I see:    a spike on the ground is chasing me in 1.9s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.27  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[034][SAC] I see:    a spike on the ground is chasing me in 1.8s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.27  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[035][SAC] I see:    a spike on the ground is chasing me in 1.7s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.27  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[036][SAC] I see:    a spike on the ground is chasing me in 1.6s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.27  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[037][SAC] I see:    a spike on the ground is chasing me in 1.5s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.27  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[038][SAC] I see:    a spike on the ground is chasing me in 1.4s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.27  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[039][SAC] I see:    a spike on the ground is chasing me in 1.3s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.27  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[040][SAC] I see:    a spike on the ground is chasing me in 1.2s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.26  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[041][SAC] I see:    a spike on the ground is chasing me in 1.1s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.26  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[042][SAC] I see:    a spike on the ground is chasing me in 1.0s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.26  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[043][SAC] I see:    a spike on the ground is chasing me in 0.9s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.26  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[044][SAC] I see:    a spike on the ground is chasing me in 0.8s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.26  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[045][SAC] I see:    a spike on the ground is chasing me in 0.7s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.26  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[046][SAC] I see:    a spike on the ground is chasing me in 0.6s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.26  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[047][SAC] I see:    a spike on the ground is chasing me in 0.5s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.26  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would jump)
+
+[048][SAC] I see:    a spike on the ground is chasing me in 0.4s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.26  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would jump)
+
+[049][SAC] I see:    a spike on the ground is chasing me in 0.3s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.26  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would jump)
+
+[050][SAC] I see:    a spike on the ground is chasing me in 0.2s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.26  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would jump)
+
+[051][SAC] I see:    a spike on the ground is chasing me in 0.1s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  STAY=+0.26  TOGGLE=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would jump)
+
+[052][SAC] I see:    back_ground_spike moving toward me; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.23  LEFT=+0.21  TOGGLE=+0.19  RIGHT=+0.19
+         I choose: STAY STILL  (chose STAY, gap +0.02 over LEFT)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[053][SAC] I see:    back_ground_spike moving toward me; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.22  STAY=+0.22  TOGGLE=+0.16  RIGHT=+0.15
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would jump)
+
+[054][SAC] I see:    back_ground_spike moving toward me; I am on the ground; I am 0% to goal
+         I think:  TOGGLE=+0.16  LEFT=+0.10  STAY=-0.16  RIGHT=-0.24
+         I choose: JUMP  (chose TOGGLE, gap +0.06 over LEFT)
+         I'm sure: unsure  (+0.06)
+         Truth:    CORRECT
+
+[055][SAC] I see:    back_ground_spike moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.18  STAY=+0.16  RIGHT=+0.15  TOGGLE=-0.26
+         I choose: MOVE LEFT  (chose LEFT, gap +0.02 over STAY)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[056][SAC] I see:    I am in the air; I am 0% to goal
+         I think:  LEFT=+0.20  STAY=+0.17  RIGHT=+0.16  TOGGLE=-0.24
+         I choose: MOVE LEFT  (chose LEFT, gap +0.03 over STAY)
+         I'm sure: very unsure  (+0.03)
+         Truth:    WRONG (rule bot would move right)
+
+[057][SAC] I see:    I am in the air; I am 0% to goal
+         I think:  LEFT=+0.20  STAY=+0.18  RIGHT=+0.17  TOGGLE=-0.19
+         I choose: MOVE LEFT  (chose LEFT, gap +0.02 over STAY)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[058][SAC] I see:    I am in the air; I am 0% to goal
+         I think:  STAY=+0.20  LEFT=+0.19  RIGHT=+0.18  TOGGLE=+0.01
+         I choose: STAY STILL  (chose STAY, gap +0.00 over LEFT)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[059][SAC] I see:    I am in the air; I am 0% to goal
+         I think:  STAY=+0.21  RIGHT=+0.20  LEFT=+0.20  TOGGLE=+0.19
+         I choose: STAY STILL  (chose STAY, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[060][SAC] I see:    a beam is sweeping overhead in 2.0s; I am in the air; I am 0% to goal
+         I think:  TOGGLE=+0.30  RIGHT=+0.25  STAY=+0.22  LEFT=+0.21
+         I choose: LAND  (chose TOGGLE, gap +0.06 over RIGHT)
+         I'm sure: unsure  (+0.06)
+         Truth:    WRONG (rule bot would move right)
+
+[061][SAC] I see:    a beam is sweeping overhead in 1.9s; I am on the ground; I am 0% to goal
+         I think:  TOGGLE=+0.26  LEFT=+0.25  STAY=+0.25  RIGHT=+0.25
+         I choose: JUMP  (chose TOGGLE, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[062][SAC] I see:    a beam is sweeping overhead in 1.8s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[063][SAC] I see:    a beam is sweeping overhead in 1.7s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[064][SAC] I see:    a beam is sweeping overhead in 1.6s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[065][SAC] I see:    a beam is sweeping overhead in 1.5s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[066][SAC] I see:    a beam is sweeping overhead in 1.4s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[067][SAC] I see:    a beam is sweeping overhead in 1.3s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[068][SAC] I see:    a beam is sweeping overhead in 1.2s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[069][SAC] I see:    a beam is sweeping overhead in 1.1s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[070][SAC] I see:    a beam is sweeping overhead in 1.0s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[071][SAC] I see:    a beam is sweeping overhead in 0.9s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[072][SAC] I see:    a beam is sweeping overhead in 0.8s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[073][SAC] I see:    a beam is sweeping overhead in 0.7s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[074][SAC] I see:    a beam is sweeping overhead in 0.6s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[075][SAC] I see:    a beam is sweeping overhead in 0.5s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would land)
+
+[076][SAC] I see:    a beam is sweeping overhead in 0.4s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would land)
+
+[077][SAC] I see:    a beam is sweeping overhead in 0.3s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would land)
+
+[078][SAC] I see:    a beam is sweeping overhead in 0.2s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.26  LEFT=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: STAY STILL  (chose STAY, gap +0.00 over LEFT)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would land)
+
+[079][SAC] I see:    a beam is sweeping overhead in 0.1s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.26  LEFT=+0.26  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: STAY STILL  (chose STAY, gap +0.00 over LEFT)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would land)
+
+[080][SAC] I see:    front_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.29  STAY=+0.25  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: MOVE LEFT  (chose LEFT, gap +0.04 over STAY)
+         I'm sure: very unsure  (+0.04)
+         Truth:    WRONG (rule bot would move right)
+
+[081][SAC] I see:    front_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.29  TOGGLE=+0.25  STAY=+0.24  RIGHT=+0.24
+         I choose: MOVE LEFT  (chose LEFT, gap +0.04 over TOGGLE)
+         I'm sure: very unsure  (+0.04)
+         Truth:    WRONG (rule bot would move right)
+
+[082][SAC] I see:    front_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.29  TOGGLE=+0.25  STAY=+0.23  RIGHT=+0.22
+         I choose: MOVE LEFT  (chose LEFT, gap +0.04 over TOGGLE)
+         I'm sure: very unsure  (+0.04)
+         Truth:    WRONG (rule bot would land)
+
+[083][SAC] I see:    front_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.27  TOGGLE=+0.25  RIGHT=+0.17  STAY=+0.16
+         I choose: MOVE LEFT  (chose LEFT, gap +0.02 over TOGGLE)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would land)
+
+[084][SAC] I see:    front_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  TOGGLE=+0.24  LEFT=+0.13  RIGHT=+0.02  STAY=-0.06
+         I choose: LAND  (chose TOGGLE, gap +0.10 over LEFT)
+         I'm sure: unsure  (+0.10)
+         Truth:    CORRECT
+
+[085][SAC] I see:    front_overhead_beam moving toward me; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.23  STAY=+0.22  RIGHT=+0.20  TOGGLE=-0.10
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[086][SAC] I see:    front_overhead_beam moving toward me; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.21  STAY=+0.21  RIGHT=+0.19  TOGGLE=-0.20
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[087][SAC] I see:    a slow beam is coming from behind in 2.0s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.27  STAY=+0.23  RIGHT=+0.22  TOGGLE=+0.13
+         I choose: MOVE LEFT  (chose LEFT, gap +0.04 over STAY)
+         I'm sure: very unsure  (+0.04)
+         Truth:    WRONG (rule bot would move right)
+
+[088][SAC] I see:    a slow beam is coming from behind in 1.9s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.27  STAY=+0.23  RIGHT=+0.21  TOGGLE=+0.11
+         I choose: MOVE LEFT  (chose LEFT, gap +0.04 over STAY)
+         I'm sure: very unsure  (+0.04)
+         Truth:    WRONG (rule bot would move right)
+
+[089][SAC] I see:    a slow beam is coming from behind in 1.8s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.24  RIGHT=+0.21  TOGGLE=+0.09
+         I choose: MOVE LEFT  (chose LEFT, gap +0.03 over STAY)
+         I'm sure: very unsure  (+0.03)
+         Truth:    WRONG (rule bot would move right)
+
+[090][SAC] I see:    a slow beam is coming from behind in 1.7s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.24  RIGHT=+0.23  TOGGLE=+0.07
+         I choose: MOVE LEFT  (chose LEFT, gap +0.02 over STAY)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[091][SAC] I see:    a slow beam is coming from behind in 1.6s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.25  RIGHT=+0.24  TOGGLE=+0.09
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[092][SAC] I see:    a slow beam is coming from behind in 1.5s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.26  RIGHT=+0.24  STAY=+0.24  TOGGLE=+0.14
+         I choose: MOVE LEFT  (chose LEFT, gap +0.02 over RIGHT)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[093][SAC] I see:    a slow beam is coming from behind in 1.4s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.26  RIGHT=+0.24  STAY=+0.24  TOGGLE=+0.16
+         I choose: MOVE LEFT  (chose LEFT, gap +0.02 over RIGHT)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[094][SAC] I see:    a slow beam is coming from behind in 1.3s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.24  RIGHT=+0.24  TOGGLE=+0.18
+         I choose: MOVE LEFT  (chose LEFT, gap +0.03 over STAY)
+         I'm sure: very unsure  (+0.03)
+         Truth:    WRONG (rule bot would move right)
+
+[095][SAC] I see:    a slow beam is coming from behind in 1.2s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  STAY=+0.25  RIGHT=+0.23  TOGGLE=+0.17
+         I choose: MOVE LEFT  (chose LEFT, gap +0.03 over STAY)
+         I'm sure: very unsure  (+0.03)
+         Truth:    WRONG (rule bot would move right)
+
+[096][SAC] I see:    a slow beam is coming from behind in 1.1s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.23
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[097][SAC] I see:    a slow beam is coming from behind in 1.0s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.23
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[098][SAC] I see:    a slow beam is coming from behind in 0.9s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.23
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[099][SAC] I see:    a slow beam is coming from behind in 0.8s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.23
+         I choose: STAY STILL  (chose STAY, gap +0.00 over LEFT)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[100][SAC] I see:    a slow beam is coming from behind in 0.7s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.23
+         I choose: STAY STILL  (chose STAY, gap +0.00 over LEFT)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[101][SAC] I see:    a slow beam is coming from behind in 0.6s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.23
+         I choose: STAY STILL  (chose STAY, gap +0.00 over LEFT)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[102][SAC] I see:    a slow beam is coming from behind in 0.5s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.23
+         I choose: STAY STILL  (chose STAY, gap +0.00 over LEFT)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[103][SAC] I see:    a slow beam is coming from behind in 0.4s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.23
+         I choose: STAY STILL  (chose STAY, gap +0.00 over LEFT)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[104][SAC] I see:    a slow beam is coming from behind in 0.3s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.23
+         I choose: STAY STILL  (chose STAY, gap +0.00 over LEFT)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[105][SAC] I see:    a slow beam is coming from behind in 0.2s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.23
+         I choose: STAY STILL  (chose STAY, gap +0.00 over LEFT)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[106][SAC] I see:    a slow beam is coming from behind in 0.1s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  TOGGLE=+0.24  RIGHT=+0.23
+         I choose: STAY STILL  (chose STAY, gap +0.00 over LEFT)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[107][SAC] I see:    back_overhead_beam moving toward me; I am on the ground; I am 0% to goal
+         I think:  TOGGLE=+0.30  STAY=+0.27  LEFT=+0.25  RIGHT=+0.25
+         I choose: JUMP  (chose TOGGLE, gap +0.03 over STAY)
+         I'm sure: very unsure  (+0.03)
+         Truth:    WRONG (rule bot would move right)
+
+[108][SAC] I see:    back_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.31  RIGHT=+0.28  STAY=+0.27  TOGGLE=+0.27
+         I choose: MOVE LEFT  (chose LEFT, gap +0.02 over RIGHT)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[109][SAC] I see:    back_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.31  STAY=+0.28  RIGHT=+0.27  TOGGLE=+0.27
+         I choose: MOVE LEFT  (chose LEFT, gap +0.03 over STAY)
+         I'm sure: very unsure  (+0.03)
+         Truth:    WRONG (rule bot would move right)
+
+[110][SAC] I see:    back_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.31  STAY=+0.28  TOGGLE=+0.26  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.03 over STAY)
+         I'm sure: very unsure  (+0.03)
+         Truth:    WRONG (rule bot would land)
+
+[111][SAC] I see:    back_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.31  STAY=+0.28  TOGGLE=+0.26  RIGHT=+0.22
+         I choose: MOVE LEFT  (chose LEFT, gap +0.02 over STAY)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would land)
+
+[112][SAC] I see:    back_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.30  STAY=+0.29  TOGGLE=+0.26  RIGHT=+0.19
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would land)
+
+[113][SAC] I see:    back_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.27  STAY=+0.27  TOGGLE=+0.25  RIGHT=+0.13
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would land)
+
+[114][SAC] I see:    back_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  STAY=+0.24  TOGGLE=+0.24  LEFT=+0.23  RIGHT=+0.06
+         I choose: STAY STILL  (chose STAY, gap +0.00 over TOGGLE)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would land)
+
+[115][SAC] I see:    a spike on the ground is chasing me in 2.0s; back_overhead_beam moving toward me; I am in the air; I am 0% to goal
+         I think:  TOGGLE=+0.20  LEFT=+0.12  RIGHT=+0.09  STAY=-0.03
+         I choose: LAND  (chose TOGGLE, gap +0.08 over LEFT)
+         I'm sure: unsure  (+0.08)
+         Truth:    CORRECT
+
+[116][SAC] I see:    a spike on the ground is chasing me in 1.9s; back_overhead_beam moving toward me; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.24  STAY=+0.21  TOGGLE=+0.18
+         I choose: MOVE LEFT  (chose LEFT, gap +0.04 over RIGHT)
+         I'm sure: very unsure  (+0.04)
+         Truth:    WRONG (rule bot would move right)
+
+[117][SAC] I see:    a spike on the ground is chasing me in 1.8s; back_overhead_beam moving toward me; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.27  RIGHT=+0.25  STAY=+0.22  TOGGLE=+0.17
+         I choose: MOVE LEFT  (chose LEFT, gap +0.03 over RIGHT)
+         I'm sure: very unsure  (+0.03)
+         Truth:    WRONG (rule bot would move right)
+
+[118][SAC] I see:    a spike on the ground is chasing me in 1.7s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.27  RIGHT=+0.25  STAY=+0.23  TOGGLE=+0.17
+         I choose: MOVE LEFT  (chose LEFT, gap +0.02 over RIGHT)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[119][SAC] I see:    a spike on the ground is chasing me in 1.6s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.27  RIGHT=+0.24  STAY=+0.23  TOGGLE=+0.17
+         I choose: MOVE LEFT  (chose LEFT, gap +0.02 over RIGHT)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[120][SAC] I see:    a spike on the ground is chasing me in 1.5s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.26  RIGHT=+0.24  STAY=+0.23  TOGGLE=+0.17
+         I choose: MOVE LEFT  (chose LEFT, gap +0.02 over RIGHT)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[121][SAC] I see:    a spike on the ground is chasing me in 1.4s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.26  RIGHT=+0.24  STAY=+0.22  TOGGLE=+0.17
+         I choose: MOVE LEFT  (chose LEFT, gap +0.02 over RIGHT)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[122][SAC] I see:    a spike on the ground is chasing me in 1.3s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.26  RIGHT=+0.24  STAY=+0.23  TOGGLE=+0.17
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[123][SAC] I see:    a spike on the ground is chasing me in 1.2s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.26  RIGHT=+0.25  STAY=+0.23  TOGGLE=+0.18
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[124][SAC] I see:    a spike on the ground is chasing me in 1.1s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.26  RIGHT=+0.25  STAY=+0.23  TOGGLE=+0.18
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[125][SAC] I see:    a spike on the ground is chasing me in 1.0s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.26  RIGHT=+0.26  STAY=+0.24  TOGGLE=+0.19
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[126][SAC] I see:    a spike on the ground is chasing me in 0.9s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.26  RIGHT=+0.26  STAY=+0.25  TOGGLE=+0.21
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[127][SAC] I see:    a spike on the ground is chasing me in 0.8s; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.26  RIGHT=+0.26  STAY=+0.26  TOGGLE=+0.22
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over RIGHT)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[128][SAC] I see:    a spike on the ground is chasing me in 0.7s; I am on the ground; I am 0% to goal
+         I think:  RIGHT=+0.27  STAY=+0.26  LEFT=+0.26  TOGGLE=+0.23
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    CORRECT
+
+[129][SAC] I see:    a spike on the ground is chasing me in 0.6s; I am on the ground; I am 1% to goal
+         I think:  STAY=+0.28  RIGHT=+0.28  LEFT=+0.25  TOGGLE=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.00 over RIGHT)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[130][SAC] I see:    a spike on the ground is chasing me in 0.5s; I am on the ground; I am 1% to goal
+         I think:  RIGHT=+0.29  STAY=+0.29  LEFT=+0.25  TOGGLE=+0.25
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would jump)
+
+[131][SAC] I see:    a spike on the ground is chasing me in 0.4s; I am on the ground; I am 2% to goal
+         I think:  RIGHT=+0.31  STAY=+0.31  TOGGLE=+0.27  LEFT=+0.25
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would jump)
+
+[132][SAC] I see:    a spike on the ground is chasing me in 0.3s; I am on the ground; I am 3% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  TOGGLE=+0.26  STAY=+0.24
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would jump)
+
+[133][SAC] I see:    a spike on the ground is chasing me in 0.2s; I am on the ground; I am 2% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  TOGGLE=+0.26  STAY=+0.23
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would jump)
+
+[134][SAC] I see:    a spike on the ground is chasing me in 0.1s; I am on the ground; I am 1% to goal
+         I think:  LEFT=+0.28  RIGHT=+0.27  TOGGLE=+0.27  STAY=+0.23
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would jump)
+
+[135][SAC] I see:    back_ground_spike moving toward me; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.20  TOGGLE=+0.18  RIGHT=+0.16
+         I choose: MOVE LEFT  (chose LEFT, gap +0.06 over STAY)
+         I'm sure: unsure  (+0.06)
+         Truth:    WRONG (rule bot would move right)
+
+[136][SAC] I see:    back_ground_spike moving toward me; I am on the ground; I am 0% to goal
+         I think:  LEFT=+0.22  TOGGLE=+0.20  STAY=+0.18  RIGHT=+0.13
+         I choose: MOVE LEFT  (chose LEFT, gap +0.03 over TOGGLE)
+         I'm sure: very unsure  (+0.03)
+         Truth:    WRONG (rule bot would jump)
+
+[137][SAC] I see:    a FAST spike is rushing at me in 2.0s; back_ground_spike moving toward me; I am on the ground; I am 0% to goal
+         I think:  TOGGLE=+0.24  LEFT=+0.06  STAY=-0.16  RIGHT=-0.25
+         I choose: JUMP  (chose TOGGLE, gap +0.18 over LEFT)
+         I'm sure: unsure  (+0.18)
+         Truth:    CORRECT
+
+[138][SAC] I see:    a FAST spike is rushing at me in 1.9s; back_ground_spike moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.27  RIGHT=+0.20  STAY=+0.18  TOGGLE=-0.19
+         I choose: MOVE LEFT  (chose LEFT, gap +0.07 over RIGHT)
+         I'm sure: unsure  (+0.07)
+         Truth:    WRONG (rule bot would move right)
+
+[139][SAC] I see:    a FAST spike is rushing at me in 1.8s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.26  RIGHT=+0.19  STAY=+0.18  TOGGLE=-0.24
+         I choose: MOVE LEFT  (chose LEFT, gap +0.07 over RIGHT)
+         I'm sure: unsure  (+0.07)
+         Truth:    WRONG (rule bot would move right)
+
+[140][SAC] I see:    a FAST spike is rushing at me in 1.7s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.25  RIGHT=+0.21  STAY=+0.20  TOGGLE=-0.24
+         I choose: MOVE LEFT  (chose LEFT, gap +0.04 over RIGHT)
+         I'm sure: very unsure  (+0.04)
+         Truth:    WRONG (rule bot would move right)
+
+[141][SAC] I see:    a FAST spike is rushing at me in 1.6s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.23  RIGHT=+0.19  STAY=+0.18  TOGGLE=-0.10
+         I choose: MOVE LEFT  (chose LEFT, gap +0.04 over RIGHT)
+         I'm sure: very unsure  (+0.04)
+         Truth:    WRONG (rule bot would move right)
+
+[142][SAC] I see:    a FAST spike is rushing at me in 1.5s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.26  STAY=+0.22  RIGHT=+0.17  TOGGLE=+0.09
+         I choose: MOVE LEFT  (chose LEFT, gap +0.04 over STAY)
+         I'm sure: very unsure  (+0.04)
+         Truth:    WRONG (rule bot would move right)
+
+[143][SAC] I see:    a FAST spike is rushing at me in 1.4s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.31  STAY=+0.26  TOGGLE=+0.21  RIGHT=+0.19
+         I choose: MOVE LEFT  (chose LEFT, gap +0.05 over STAY)
+         I'm sure: very unsure  (+0.05)
+         Truth:    WRONG (rule bot would move right)
+
+[144][SAC] I see:    a FAST spike is rushing at me in 1.3s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.27  STAY=+0.27  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[145][SAC] I see:    a FAST spike is rushing at me in 1.2s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.27  STAY=+0.27  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[146][SAC] I see:    a FAST spike is rushing at me in 1.1s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.27  STAY=+0.27  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[147][SAC] I see:    a FAST spike is rushing at me in 1.0s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.27  STAY=+0.27  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[148][SAC] I see:    a FAST spike is rushing at me in 0.9s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.27  STAY=+0.27  TOGGLE=+0.25  RIGHT=+0.25
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[149][SAC] I see:    a FAST spike is rushing at me in 0.8s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.27  STAY=+0.27  TOGGLE=+0.25  RIGHT=+0.24
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[150][SAC] I see:    a FAST spike is rushing at me in 0.7s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.27  STAY=+0.27  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[151][SAC] I see:    a FAST spike is rushing at me in 0.6s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.28  STAY=+0.27  TOGGLE=+0.24  RIGHT=+0.24
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[152][SAC] I see:    a FAST spike is rushing at me in 0.5s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.28  STAY=+0.27  RIGHT=+0.24  TOGGLE=+0.24
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[153][SAC] I see:    a FAST spike is rushing at me in 0.4s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.28  STAY=+0.27  RIGHT=+0.24  TOGGLE=+0.24
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[154][SAC] I see:    a FAST spike is rushing at me in 0.3s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.28  STAY=+0.27  RIGHT=+0.24  TOGGLE=+0.24
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[155][SAC] I see:    a FAST spike is rushing at me in 0.2s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.28  STAY=+0.27  RIGHT=+0.24  TOGGLE=+0.24
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[156][SAC] I see:    a FAST spike is rushing at me in 0.1s; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.28  STAY=+0.27  RIGHT=+0.24  TOGGLE=+0.23
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over STAY)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[157][SAC] I see:    fast_front_spike moving toward me; I am in the air; I am 0% to goal
+         I think:  LEFT=+0.27  TOGGLE=+0.26  STAY=+0.25  RIGHT=+0.23
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over TOGGLE)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[158][SAC] I see:    a slow beam is coming from behind in 2.0s; fast_front_spike moving toward me; I am in the air; I am 0% to goal
+         I think:  RIGHT=+0.30  STAY=+0.23  LEFT=+0.22  TOGGLE=+0.01
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.07 over STAY)
+         I'm sure: unsure  (+0.07)
+         Truth:    CORRECT
+
+[159][SAC] I see:    a slow beam is coming from behind in 1.9s; fast_front_spike moving toward me; I am in the air; I am 1% to goal
+         I think:  RIGHT=+0.25  STAY=+0.20  LEFT=+0.18  TOGGLE=-0.11
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.05 over STAY)
+         I'm sure: unsure  (+0.05)
+         Truth:    CORRECT
+
+[160][SAC] I see:    a slow beam is coming from behind in 1.8s; I am in the air; I am 2% to goal
+         I think:  RIGHT=+0.20  STAY=+0.18  LEFT=+0.16  TOGGLE=-0.20
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.02 over STAY)
+         I'm sure: very unsure  (+0.02)
+         Truth:    CORRECT
+
+[161][SAC] I see:    a slow beam is coming from behind in 1.7s; I am in the air; I am 3% to goal
+         I think:  STAY=+0.19  LEFT=+0.19  RIGHT=+0.18  TOGGLE=-0.23
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[162][SAC] I see:    a slow beam is coming from behind in 1.6s; I am in the air; I am 3% to goal
+         I think:  LEFT=+0.23  STAY=+0.21  RIGHT=+0.21  TOGGLE=-0.18
+         I choose: MOVE LEFT  (chose LEFT, gap +0.02 over STAY)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[163][SAC] I see:    a slow beam is coming from behind in 1.5s; I am in the air; I am 2% to goal
+         I think:  LEFT=+0.24  RIGHT=+0.23  STAY=+0.22  TOGGLE=-0.09
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over RIGHT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[164][SAC] I see:    a slow beam is coming from behind in 1.4s; I am in the air; I am 1% to goal
+         I think:  RIGHT=+0.26  LEFT=+0.25  STAY=+0.22  TOGGLE=+0.03
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    CORRECT
+
+[165][SAC] I see:    a slow beam is coming from behind in 1.3s; I am in the air; I am 2% to goal
+         I think:  RIGHT=+0.27  LEFT=+0.25  STAY=+0.23  TOGGLE=+0.08
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.02 over LEFT)
+         I'm sure: very unsure  (+0.02)
+         Truth:    CORRECT
+
+[166][SAC] I see:    a slow beam is coming from behind in 1.2s; I am in the air; I am 3% to goal
+         I think:  RIGHT=+0.27  LEFT=+0.26  STAY=+0.24  TOGGLE=+0.11
+         I choose: MOVE RIGHT  (chose RIGHT, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    CORRECT
+
+[167][SAC] I see:    a slow beam is coming from behind in 1.1s; I am in the air; I am 4% to goal
+         I think:  LEFT=+0.25  RIGHT=+0.25  STAY=+0.24  TOGGLE=+0.13
+         I choose: MOVE LEFT  (chose LEFT, gap +0.00 over RIGHT)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[168][SAC] I see:    a slow beam is coming from behind in 1.0s; I am in the air; I am 3% to goal
+         I think:  LEFT=+0.26  STAY=+0.24  RIGHT=+0.24  TOGGLE=+0.17
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[169][SAC] I see:    a slow beam is coming from behind in 0.9s; I am in the air; I am 2% to goal
+         I think:  LEFT=+0.26  STAY=+0.25  RIGHT=+0.23  TOGGLE=+0.19
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[170][SAC] I see:    a slow beam is coming from behind in 0.8s; I am in the air; I am 1% to goal
+         I think:  LEFT=+0.26  STAY=+0.25  RIGHT=+0.23  TOGGLE=+0.21
+         I choose: MOVE LEFT  (chose LEFT, gap +0.01 over STAY)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[171][SAC] I see:    a slow beam is coming from behind in 0.7s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.25  RIGHT=+0.23  TOGGLE=+0.21
+         I choose: STAY STILL  (chose STAY, gap +0.00 over LEFT)
+         I'm sure: very unsure  (+0.00)
+         Truth:    WRONG (rule bot would move right)
+
+[172][SAC] I see:    a slow beam is coming from behind in 0.6s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  RIGHT=+0.23  TOGGLE=+0.21
+         I choose: STAY STILL  (chose STAY, gap +0.01 over LEFT)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[173][SAC] I see:    a slow beam is coming from behind in 0.5s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.25  LEFT=+0.24  RIGHT=+0.23  TOGGLE=+0.21
+         I choose: STAY STILL  (chose STAY, gap +0.02 over LEFT)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would land)
+
+[174][SAC] I see:    a slow beam is coming from behind in 0.4s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.26  LEFT=+0.23  RIGHT=+0.23  TOGGLE=+0.21
+         I choose: STAY STILL  (chose STAY, gap +0.02 over LEFT)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would land)
+
+[175][SAC] I see:    a slow beam is coming from behind in 0.3s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.26  RIGHT=+0.23  LEFT=+0.23  TOGGLE=+0.21
+         I choose: STAY STILL  (chose STAY, gap +0.03 over RIGHT)
+         I'm sure: very unsure  (+0.03)
+         Truth:    WRONG (rule bot would land)
+
+[176][SAC] I see:    a slow beam is coming from behind in 0.2s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.27  RIGHT=+0.23  LEFT=+0.23  TOGGLE=+0.21
+         I choose: STAY STILL  (chose STAY, gap +0.03 over RIGHT)
+         I'm sure: very unsure  (+0.03)
+         Truth:    WRONG (rule bot would land)
+
+[177][SAC] I see:    a slow beam is coming from behind in 0.1s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.27  RIGHT=+0.24  LEFT=+0.23  TOGGLE=+0.21
+         I choose: STAY STILL  (chose STAY, gap +0.03 over RIGHT)
+         I'm sure: very unsure  (+0.03)
+         Truth:    WRONG (rule bot would land)
+
+[178][SAC] I see:    I am in the air; I am 0% to goal
+         I think:  STAY=+0.28  TOGGLE=+0.27  RIGHT=+0.25  LEFT=+0.23
+         I choose: STAY STILL  (chose STAY, gap +0.01 over TOGGLE)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[179][SAC] I see:    I am in the air; I am 0% to goal
+         I think:  STAY=+0.28  TOGGLE=+0.27  RIGHT=+0.25  LEFT=+0.23
+         I choose: STAY STILL  (chose STAY, gap +0.01 over TOGGLE)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[180][SAC] I see:    I am in the air; I am 0% to goal
+         I think:  STAY=+0.28  TOGGLE=+0.27  RIGHT=+0.25  LEFT=+0.23
+         I choose: STAY STILL  (chose STAY, gap +0.01 over TOGGLE)
+         I'm sure: very unsure  (+0.01)
+         Truth:    WRONG (rule bot would move right)
+
+[181][SAC] I see:    a beam is sweeping overhead in 2.0s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.28  TOGGLE=+0.26  LEFT=+0.26  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.02 over TOGGLE)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[182][SAC] I see:    a beam is sweeping overhead in 1.9s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.28  TOGGLE=+0.26  LEFT=+0.26  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.02 over TOGGLE)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[183][SAC] I see:    a beam is sweeping overhead in 1.8s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.28  TOGGLE=+0.26  LEFT=+0.26  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.02 over TOGGLE)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[184][SAC] I see:    a beam is sweeping overhead in 1.7s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.28  TOGGLE=+0.26  LEFT=+0.26  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.02 over TOGGLE)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[185][SAC] I see:    a beam is sweeping overhead in 1.6s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.29  TOGGLE=+0.26  LEFT=+0.26  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.02 over TOGGLE)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[186][SAC] I see:    a beam is sweeping overhead in 1.5s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.29  TOGGLE=+0.26  LEFT=+0.26  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.02 over TOGGLE)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[187][SAC] I see:    a beam is sweeping overhead in 1.4s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.29  TOGGLE=+0.27  LEFT=+0.26  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.02 over TOGGLE)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[188][SAC] I see:    a beam is sweeping overhead in 1.3s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.29  TOGGLE=+0.27  LEFT=+0.26  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.02 over TOGGLE)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[189][SAC] I see:    a beam is sweeping overhead in 1.2s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.29  TOGGLE=+0.27  LEFT=+0.26  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.02 over TOGGLE)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[190][SAC] I see:    a beam is sweeping overhead in 1.1s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.29  TOGGLE=+0.27  LEFT=+0.26  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.02 over TOGGLE)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[191][SAC] I see:    a beam is sweeping overhead in 1.0s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.29  TOGGLE=+0.27  LEFT=+0.26  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.02 over TOGGLE)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[192][SAC] I see:    a beam is sweeping overhead in 0.9s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.29  TOGGLE=+0.27  LEFT=+0.26  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.02 over TOGGLE)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[193][SAC] I see:    a beam is sweeping overhead in 0.8s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.29  TOGGLE=+0.27  LEFT=+0.26  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.02 over TOGGLE)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[194][SAC] I see:    a beam is sweeping overhead in 0.7s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.29  TOGGLE=+0.27  LEFT=+0.26  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.02 over TOGGLE)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[195][SAC] I see:    a beam is sweeping overhead in 0.6s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.29  TOGGLE=+0.27  LEFT=+0.26  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.02 over TOGGLE)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[196][SAC] I see:    a beam is sweeping overhead in 0.5s; I am in the air; I am 0% to goal
+         I think:  STAY=+0.29  TOGGLE=+0.27  LEFT=+0.26  RIGHT=+0.24
+         I choose: STAY STILL  (chose STAY, gap +0.02 over TOGGLE)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would land)
+
+[197][SAC] I see:    a beam is sweeping overhead in 0.4s; a spike on the ground is sliding at me in 2.0s; I am in the air; I am 0% to goal
+         I think:  TOGGLE=+0.30  STAY=+0.28  RIGHT=+0.28  LEFT=+0.23
+         I choose: LAND  (chose TOGGLE, gap +0.02 over STAY)
+         I'm sure: very unsure  (+0.02)
+         Truth:    CORRECT
+
+[198][SAC] I see:    a beam is sweeping overhead in 0.3s; a spike on the ground is sliding at me in 1.9s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.27  TOGGLE=+0.25  RIGHT=+0.25  LEFT=+0.20
+         I choose: STAY STILL  (chose STAY, gap +0.02 over TOGGLE)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+[199][SAC] I see:    a beam is sweeping overhead in 0.2s; a spike on the ground is sliding at me in 1.8s; I am on the ground; I am 0% to goal
+         I think:  STAY=+0.27  TOGGLE=+0.25  RIGHT=+0.25  LEFT=+0.20
+         I choose: STAY STILL  (chose STAY, gap +0.02 over TOGGLE)
+         I'm sure: very unsure  (+0.02)
+         Truth:    WRONG (rule bot would move right)
+
+--- Ended: timeout after 200 steps ---
+
+### sac overall correct=0.080 win=0.000
