@@ -1,0 +1,617 @@
+"""
+Calibration experiment — 4 algorithms (DQN, PPO, A2C, SAC)
+Saves multiple .txt files, zips at the end.
+"""
+
+import os, time, random, zipfile, shutil
+from datetime import datetime
+import numpy as np
+from collections import deque, namedtuple, defaultdict
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+
+STAMP = datetime.now().strftime("%Y%m%d_%H%M%S")
+OUT = f"calib_run_{STAMP}"
+os.makedirs(OUT, exist_ok=True)
+
+# ============================================================
+# CASES
+# ============================================================
+
+class Case:
+    def __init__(self, cid, name, hazard_type, speed, plain, avoid):
+        self.cid = cid; self.name = name
+        self.hazard_type = hazard_type
+        self.speed = speed; self.plain = plain; self.avoid = avoid
+    def requires(self):
+        return "JUMP" if self.hazard_type == 'air' else "STAY GROUND"
+
+CASES = [
+    Case(0, "front_ground_spike",  'air',    0.40, "a spike on the ground is sliding at me", "jump"),
+    Case(1, "front_overhead_beam", 'ground', 0.40, "a beam is sweeping overhead", "stay down"),
+    Case(2, "back_ground_spike",   'air',    0.70, "a spike on the ground is chasing me", "jump"),
+    Case(3, "back_overhead_beam",  'ground', 0.25, "a slow beam is coming from behind", "stay down"),
+    Case(4, "fast_front_spike",    'air',    0.80, "a FAST spike is rushing at me", "jump quickly"),
+]
+
+ACTION_NAMES = ["LEFT", "RIGHT", "TOGGLE", "STAY"]
+
+def action_plain(a, airborne):
+    if a == 0: return "move left"
+    if a == 1: return "move right"
+    if a == 2: return "jump" if not airborne else "land"
+    return "stay still"
+
+# ============================================================
+# ENV
+# ============================================================
+
+class Hazard:
+    def __init__(self, cid, require, x, vx):
+        self.cid = cid; self.require = require
+        self.x = x; self.vx = vx; self.hit = False
+
+class RunnerEnv:
+    def __init__(self, preset="no_cheat", warning_time=2.0,
+                 dt=0.1, max_steps=200, seed=None):
+        self.preset = preset
+        if preset == "cheat":
+            self.agent_speed = 0.05
+            self.spawn_min, self.spawn_max = 1.0, 2.5
+            self.step_penalty = 0.0
+        else:
+            self.agent_speed = 0.012
+            self.spawn_min, self.spawn_max = 0.3, 0.8
+            self.step_penalty = -0.005
+        self.cases = CASES; self.n_cases = len(CASES)
+        self.n_actions = 4; self.warning_time = warning_time
+        self.dt = dt; self.max_steps = max_steps
+        self.rng = np.random.default_rng(seed)
+
+    @property
+    def state_dim(self): return 3 + 3 * self.n_cases
+
+    def reset(self, active_cases=None):
+        if active_cases is None: active_cases = list(range(self.n_cases))
+        self.active = list(active_cases)
+        self.agent_x = 0.0; self.agent_h = 0
+        self.step_count = 0; self.done = False
+        self.hazards = []; self.warnings = {}
+        self.status = {c: 'inactive' for c in self.active}
+        self._schedule(delay=self.rng.uniform(self.spawn_min, self.spawn_max))
+        return self._state()
+
+    def _schedule(self, delay):
+        self.next_time = delay
+        avail = [c for c in self.active if self.status[c] == 'inactive']
+        self.next_cid = self.rng.choice(avail) if avail else None
+
+    def _state(self):
+        s = [self.agent_x, float(self.agent_h), self.step_count / self.max_steps]
+        for cid in range(self.n_cases):
+            if cid not in self.active:
+                s += [0.0, 0.0, 0.0]; continue
+            warn = 1.0 if cid in self.warnings else 0.0
+            active = 1.0 if self.status.get(cid) == 'active' else 0.0
+            rel = 0.0
+            for h in self.hazards:
+                if h.cid == cid:
+                    rel = h.x - self.agent_x; break
+            s += [warn, active, rel]
+        return np.array(s, dtype=np.float32)
+
+    def step(self, a):
+        if self.done: return self._state(), 0.0, True, {}
+        self.step_count += 1
+        if a == 0: self.agent_x = max(0.0, self.agent_x - self.agent_speed)
+        elif a == 1: self.agent_x = min(1.2, self.agent_x + self.agent_speed)
+        elif a == 2: self.agent_h = 1 - self.agent_h
+
+        fired = []
+        for cid in list(self.warnings.keys()):
+            self.warnings[cid] -= self.dt
+            if self.warnings[cid] <= 0: fired.append(cid)
+        for cid in fired:
+            del self.warnings[cid]; self._spawn(cid); self.status[cid] = 'active'
+
+        if self.next_cid is not None:
+            self.next_time -= self.dt
+            if self.next_time <= 0:
+                cid = self.next_cid
+                self.warnings[cid] = self.warning_time
+                self.status[cid] = 'pending'
+                self._schedule(delay=self.rng.uniform(1.5, 3.5))
+
+        for h in self.hazards: h.x += h.vx * self.dt
+        for h in self.hazards:
+            if not h.hit and abs(h.x - self.agent_x) < 0.06:
+                if self.agent_h != h.require:
+                    self.done = True
+                    return self._state(), -1.0, True, {'reason': f'hit_{h.cid}'}
+                else: h.hit = True
+
+        self.hazards = [h for h in self.hazards if -0.3 < h.x < 1.4]
+        for cid in list(self.status.keys()):
+            if self.status[cid] == 'active' and not any(h.cid == cid for h in self.hazards):
+                self.status[cid] = 'inactive'
+
+        if self.agent_x >= 1.0:
+            self.done = True
+            return self._state(), 1.0, True, {'reason': 'goal'}
+        if self.step_count >= self.max_steps:
+            self.done = True
+            return self._state(), -0.5, True, {'reason': 'timeout'}
+        return self._state(), self.step_penalty, False, {}
+
+    def _spawn(self, cid):
+        c = self.cases[cid]
+        req = 1 if c.hazard_type == 'air' else 0
+        if self.rng.random() < 0.5:
+            x = self.agent_x + 0.35; vx = -c.speed
+        else:
+            x = self.agent_x - 0.35; vx = c.speed
+        self.hazards.append(Hazard(cid, req, x, vx))
+
+# ============================================================
+# RULE BOT (oracle)
+# ============================================================
+
+def rule_based(env, s):
+    for h in env.hazards:
+        if abs(h.x - env.agent_x) < 0.25:
+            if h.require == 1 and env.agent_h == 0: return 2
+            if h.require == 0 and env.agent_h == 1: return 2
+    for cid, tt in env.warnings.items():
+        if tt < 0.5:
+            c = env.cases[cid]
+            if c.hazard_type == 'air' and env.agent_h == 0: return 2
+            if c.hazard_type == 'ground' and env.agent_h == 1: return 2
+    return 1
+
+# ============================================================
+# DQN
+# ============================================================
+
+T = namedtuple('T', ('s','a','r','s2','d'))
+
+class Buf:
+    def __init__(self, cap=50000): self.b = deque(maxlen=cap)
+    def push(self, *a): self.b.append(T(*a))
+    def sample(self, n): return random.sample(self.b, n)
+    def __len__(self): return len(self.b)
+
+class QNet(nn.Module):
+    def __init__(self, sd, na, hidden=128):
+        super().__init__()
+        self.net = nn.Sequential(
+            nn.Linear(sd, hidden), nn.ReLU(),
+            nn.Linear(hidden, hidden), nn.ReLU(),
+            nn.Linear(hidden, na))
+    def forward(self, x): return self.net(x)
+
+class DQNAgent:
+    def __init__(self, sd, na, lr=5e-4, gamma=0.99,
+                 eps_start=1.0, eps_end=0.05, eps_decay=50000,
+                 bs=128, target_sync=2000):
+        self.na = na; self.gamma = gamma
+        self.eps_start = eps_start; self.eps_end = eps_end
+        self.eps_decay = eps_decay; self.bs = bs
+        self.target_sync = target_sync; self.steps = 0
+        self.q = QNet(sd, na); self.qt = QNet(sd, na)
+        self.qt.load_state_dict(self.q.state_dict())
+        self.opt = optim.Adam(self.q.parameters(), lr=lr)
+        self.buf = Buf()
+    def eps(self):
+        return self.eps_end + (self.eps_start - self.eps_end) * np.exp(-self.steps / self.eps_decay)
+    def q_vals(self, s):
+        with torch.no_grad():
+            return self.q(torch.tensor(s, dtype=torch.float32).unsqueeze(0)).squeeze(0).numpy()
+    def act(self, s, greedy=False):
+        if not greedy and random.random() < self.eps():
+            return random.randrange(self.na)
+        return int(np.argmax(self.q_vals(s)))
+    def store(self, *a): self.buf.push(*a)
+    def train(self):
+        if len(self.buf) < self.bs: return
+        batch = self.buf.sample(self.bs)
+        s  = torch.tensor(np.array([b.s for b in batch]), dtype=torch.float32)
+        a  = torch.tensor([b.a for b in batch], dtype=torch.long).unsqueeze(1)
+        r  = torch.tensor([b.r for b in batch], dtype=torch.float32).unsqueeze(1)
+        s2 = torch.tensor(np.array([b.s2 for b in batch]), dtype=torch.float32)
+        d  = torch.tensor([b.d for b in batch], dtype=torch.float32).unsqueeze(1)
+        q = self.q(s).gather(1, a)
+        with torch.no_grad():
+            qn = self.qt(s2).max(dim=1, keepdim=True)[0]
+            tgt = r + self.gamma * qn * (1 - d)
+        loss = nn.functional.mse_loss(q, tgt)
+        self.opt.zero_grad(); loss.backward(); self.opt.step()
+        self.steps += 1
+        if self.steps % self.target_sync == 0:
+            self.qt.load_state_dict(self.q.state_dict())
+
+# ============================================================
+# PPO
+# ============================================================
+
+class AC(nn.Module):
+    def __init__(self, sd, na, hidden=128):
+        super().__init__()
+        self.body = nn.Sequential(
+            nn.Linear(sd, hidden), nn.ReLU(),
+            nn.Linear(hidden, hidden), nn.ReLU())
+        self.pi = nn.Linear(hidden, na)
+        self.v  = nn.Linear(hidden, 1)
+    def forward(self, x):
+        h = self.body(x)
+        return self.pi(h), self.v(h)
+
+class PPOAgent:
+    def __init__(self, sd, na, lr=3e-4, gamma=0.99, lam=0.95,
+                 clip=0.2, epochs=10, minibatch=64):
+        self.na = na; self.gamma = gamma; self.lam = lam
+        self.clip = clip; self.epochs = epochs; self.mb = minibatch
+        self.net = AC(sd, na)
+        self.opt = optim.Adam(self.net.parameters(), lr=lr)
+    @torch.no_grad()
+    def act(self, s, greedy=False):
+        logits, v = self.net(torch.tensor(s, dtype=torch.float32).unsqueeze(0))
+        probs = torch.softmax(logits, dim=-1).squeeze(0)
+        if greedy: a = int(torch.argmax(probs))
+        else: a = int(torch.multinomial(probs, 1))
+        return a, float(torch.log(probs[a] + 1e-8)), float(v.squeeze())
+    @torch.no_grad()
+    def q_vals(self, s):
+        logits, _ = self.net(torch.tensor(s, dtype=torch.float32).unsqueeze(0))
+        return logits.squeeze(0).numpy()
+    def update(self, traj):
+        s  = torch.tensor(np.array([t[0] for t in traj]), dtype=torch.float32)
+        a  = torch.tensor([t[1] for t in traj], dtype=torch.long)
+        r  = np.array([t[2] for t in traj], dtype=np.float32)
+        s2 = torch.tensor(np.array([t[3] for t in traj]), dtype=torch.float32)
+        d  = np.array([t[4] for t in traj], dtype=np.float32)
+        old_logp = torch.tensor([t[5] for t in traj], dtype=torch.float32)
+        old_v    = torch.tensor([t[6] for t in traj], dtype=torch.float32)
+        with torch.no_grad():
+            _, v_next = self.net(s2)
+            v_next = v_next.squeeze(-1).numpy()
+        adv = np.zeros_like(r); last = 0.0
+        for i in reversed(range(len(r))):
+            nv = 0.0 if d[i] > 0.5 else v_next[i]
+            delta = r[i] + self.gamma * nv - old_v[i].item()
+            last = delta + self.gamma * self.lam * (0 if d[i] > 0.5 else last)
+            adv[i] = last
+        ret = adv + old_v.numpy()
+        adv_t = torch.tensor(adv, dtype=torch.float32)
+        adv_t = (adv_t - adv_t.mean()) / (adv_t.std() + 1e-8)
+        ret_t = torch.tensor(ret, dtype=torch.float32)
+        n = len(traj)
+        for _ in range(self.epochs):
+            idx = np.random.permutation(n)
+            for start in range(0, n, self.mb):
+                j = idx[start:start+self.mb]
+                logits, v = self.net(s[j]); v = v.squeeze(-1)
+                logp = torch.log_softmax(logits, dim=-1)
+                new_logp = logp.gather(1, a[j].unsqueeze(1)).squeeze(1)
+                ratio = torch.exp(new_logp - old_logp[j])
+                surr1 = ratio * adv_t[j]
+                surr2 = torch.clamp(ratio, 1 - self.clip, 1 + self.clip) * adv_t[j]
+                loss = -torch.min(surr1, surr2).mean() + 0.5 * nn.functional.mse_loss(v, ret_t[j])
+                self.opt.zero_grad(); loss.backward()
+                nn.utils.clip_grad_norm_(self.net.parameters(), 0.5)
+                self.opt.step()
+
+# ============================================================
+# A2C
+# ============================================================
+
+class A2CAgent:
+    def __init__(self, sd, na, lr=7e-4, gamma=0.99, lam=0.95):
+        self.na = na; self.gamma = gamma; self.lam = lam
+        self.net = AC(sd, na)
+        self.opt = optim.Adam(self.net.parameters(), lr=lr)
+    @torch.no_grad()
+    def act(self, s, greedy=False):
+        logits, v = self.net(torch.tensor(s, dtype=torch.float32).unsqueeze(0))
+        probs = torch.softmax(logits, dim=-1).squeeze(0)
+        if greedy: a = int(torch.argmax(probs))
+        else: a = int(torch.multinomial(probs, 1))
+        return a, float(torch.log(probs[a] + 1e-8)), float(v.squeeze())
+    @torch.no_grad()
+    def q_vals(self, s):
+        logits, _ = self.net(torch.tensor(s, dtype=torch.float32).unsqueeze(0))
+        return logits.squeeze(0).numpy()
+    def update(self, traj):
+        s  = torch.tensor(np.array([t[0] for t in traj]), dtype=torch.float32)
+        a  = torch.tensor([t[1] for t in traj], dtype=torch.long)
+        r  = np.array([t[2] for t in traj], dtype=np.float32)
+        s2 = torch.tensor(np.array([t[3] for t in traj]), dtype=torch.float32)
+        d  = np.array([t[4] for t in traj], dtype=np.float32)
+        old_logp = torch.tensor([t[5] for t in traj], dtype=torch.float32)
+        old_v    = torch.tensor([t[6] for t in traj], dtype=torch.float32)
+        with torch.no_grad():
+            _, v_next = self.net(s2)
+            v_next = v_next.squeeze(-1).numpy()
+        adv = np.zeros_like(r); last = 0.0
+        for i in reversed(range(len(r))):
+            nv = 0.0 if d[i] > 0.5 else v_next[i]
+            delta = r[i] + self.gamma * nv - old_v[i].item()
+            last = delta + self.gamma * self.lam * (0 if d[i] > 0.5 else last)
+            adv[i] = last
+        ret = adv + old_v.numpy()
+        adv_t = torch.tensor(adv, dtype=torch.float32)
+        adv_t = (adv_t - adv_t.mean()) / (adv_t.std() + 1e-8)
+        ret_t = torch.tensor(ret, dtype=torch.float32)
+        logits, v = self.net(s); v = v.squeeze(-1)
+        logp = torch.log_softmax(logits, dim=-1)
+        new_logp = logp.gather(1, a.unsqueeze(1)).squeeze(1)
+        pi_loss = -(new_logp * adv_t.detach()).mean()
+        v_loss = nn.functional.mse_loss(v, ret_t)
+        loss = pi_loss + 0.5 * v_loss - 0.01 * (-(torch.softmax(logits, -1) * logp).sum(-1)).mean()
+        self.opt.zero_grad(); loss.backward()
+        nn.utils.clip_grad_norm_(self.net.parameters(), 0.5)
+        self.opt.step()
+
+# ============================================================
+# SAC (discrete)
+# ============================================================
+
+class SACAgent:
+    def __init__(self, sd, na, lr=3e-4, gamma=0.99, alpha=0.2,
+                 tau=0.005, bs=128, target_sync=2000, buffer_cap=50000):
+        self.na = na; self.gamma = gamma; self.alpha = alpha
+        self.tau = tau; self.bs = bs; self.target_sync = target_sync
+        self.steps = 0
+        self.actor = AC(sd, na)
+        self.q1 = QNet(sd, na); self.q2 = QNet(sd, na)
+        self.q1t = QNet(sd, na); self.q2t = QNet(sd, na)
+        self.q1t.load_state_dict(self.q1.state_dict())
+        self.q2t.load_state_dict(self.q2.state_dict())
+        self.opt_a = optim.Adam(self.actor.parameters(), lr=lr)
+        self.opt_q = optim.Adam(list(self.q1.parameters()) + list(self.q2.parameters()), lr=lr)
+        self.buf = Buf(cap=buffer_cap)
+        self.eps_start = 1.0; self.eps_end = 0.05; self.eps_decay = 50000
+    def eps(self):
+        return self.eps_end + (self.eps_start - self.eps_end) * np.exp(-self.steps / self.eps_decay)
+    @torch.no_grad()
+    def q_vals(self, s):
+        q1 = self.q1(torch.tensor(s, dtype=torch.float32).unsqueeze(0)).squeeze(0).numpy()
+        q2 = self.q2(torch.tensor(s, dtype=torch.float32).unsqueeze(0)).squeeze(0).numpy()
+        return (q1 + q2) / 2
+    def act(self, s, greedy=False):
+        if not greedy and random.random() < self.eps():
+            return random.randrange(self.na)
+        with torch.no_grad():
+            logits, _ = self.actor(torch.tensor(s, dtype=torch.float32).unsqueeze(0))
+            probs = torch.softmax(logits, dim=-1).squeeze(0)
+            if greedy: return int(torch.argmax(probs))
+            return int(torch.multinomial(probs, 1))
+    def store(self, *a): self.buf.push(*a)
+    def train(self):
+        if len(self.buf) < self.bs: return
+        batch = self.buf.sample(self.bs)
+        s  = torch.tensor(np.array([b.s for b in batch]), dtype=torch.float32)
+        a  = torch.tensor([b.a for b in batch], dtype=torch.long).unsqueeze(1)
+        r  = torch.tensor([b.r for b in batch], dtype=torch.float32).unsqueeze(1)
+        s2 = torch.tensor(np.array([b.s2 for b in batch]), dtype=torch.float32)
+        d  = torch.tensor([b.d for b in batch], dtype=torch.float32).unsqueeze(1)
+        with torch.no_grad():
+            logits2, _ = self.actor(s2)
+            probs2 = torch.softmax(logits2, dim=-1)
+            logp2 = torch.log(probs2 + 1e-8)
+            q1n = self.q1t(s2); q2n = self.q2t(s2)
+            qn = torch.min(q1n, q2n) - self.alpha * logp2
+            v = (probs2 * qn).sum(dim=1, keepdim=True)
+            tgt = r + self.gamma * v * (1 - d)
+        q1v = self.q1(s).gather(1, a); q2v = self.q2(s).gather(1, a)
+        q_loss = nn.functional.mse_loss(q1v, tgt) + nn.functional.mse_loss(q2v, tgt)
+        self.opt_q.zero_grad(); q_loss.backward(); self.opt_q.step()
+        logits, _ = self.actor(s)
+        probs = torch.softmax(logits, dim=-1)
+        logp = torch.log(probs + 1e-8)
+        with torch.no_grad():
+            q1c = self.q1(s); q2c = self.q2(s)
+            qc = torch.min(q1c, q2c)
+        a_loss = (probs * (self.alpha * logp - qc)).sum(dim=1).mean()
+        self.opt_a.zero_grad(); a_loss.backward(); self.opt_a.step()
+        self.steps += 1
+        if self.steps % self.target_sync == 0:
+            for p, tp in [(self.q1, self.q1t), (self.q2, self.q2t)]:
+                for pp, tpp in zip(p.parameters(), tp.parameters()):
+                    tpp.data.copy_(self.tau * pp.data + (1 - self.tau) * tpp.data)
+
+# ============================================================
+# TRAINING
+# ============================================================
+
+def train(agent, kind, env, active, episodes=600, log_fn=None):
+    for ep in range(episodes):
+        s = env.reset(active_cases=active); traj = []; R = 0.0
+        while True:
+            if kind == "dqn":
+                a = agent.act(s); s2, r, d, _ = env.step(a)
+                agent.store(s, a, r, s2, d); agent.train()
+            elif kind == "sac":
+                a = agent.act(s); s2, r, d, _ = env.step(a)
+                agent.store(s, a, r, s2, d); agent.train()
+            else:
+                a, logp, v = agent.act(s); s2, r, d, _ = env.step(a)
+                traj.append((s, a, r, s2, float(d), logp, v))
+            s = s2; R += r
+            if d: break
+        if kind in ("ppo", "a2c"):
+            agent.update(traj)
+        if log_fn and (ep+1) % 200 == 0:
+            log_fn(f"    {kind} ep {ep+1:4d}  R={R:+.2f}")
+    return agent
+
+# ============================================================
+# CALIBRATION
+# ============================================================
+
+BUCKETS = [
+    ("very unsure",   0.00, 0.05),
+    ("unsure",        0.05, 0.20),
+    ("confident",     0.20, 0.50),
+    ("very confident",0.50, 999.0),
+]
+
+def bucket_of(gap):
+    for name, lo, hi in BUCKETS:
+        if lo <= gap < hi: return name
+    return "very confident"
+
+def confidence_label(gap):
+    return bucket_of(gap)
+
+def state_narrative(env):
+    parts = []
+    for cid, t in env.warnings.items():
+        c = env.cases[cid]
+        parts.append(f"{c.plain} in {t:.1f}s")
+    for h in env.hazards:
+        if not h.hit:
+            c = env.cases[h.cid]
+            d = "toward me" if (h.vx < 0 and h.x > env.agent_x) or (h.vx > 0 and h.x < env.agent_x) else "away"
+            parts.append(f"{c.name} moving {d}")
+    parts.append("I am " + ("in the air" if env.agent_h else "on the ground"))
+    parts.append(f"I am {int(env.agent_x*100)}% to goal")
+    return "; ".join(parts)
+
+def narrative_block(step, env, q, action, rule_action, kind):
+    qs = np.argsort(-q)
+    top = qs[0]; second = qs[1]
+    gap = float(q[top] - q[second])
+    conf = confidence_label(gap)
+    sees = state_narrative(env)
+    thinks = "  ".join(f"{ACTION_NAMES[i]}={q[i]:+.2f}" for i in qs)
+    verb = action_plain(action, env.agent_h)
+    does = f"{verb.upper()}  (chose {ACTION_NAMES[action]}, gap {gap:+.2f} over {ACTION_NAMES[second]})"
+    correct = "CORRECT" if action == rule_action else f"WRONG (rule bot would {action_plain(rule_action, env.agent_h)})"
+    return (
+        f"[{step:03d}][{kind}] I see:    {sees}\n"
+        f"         I think:  {thinks}\n"
+        f"         I choose: {does}\n"
+        f"         I'm sure: {conf}  ({gap:+.2f})\n"
+        f"         Truth:    {correct}\n"
+    )
+
+def run_calibration(agent, env, active, kind, n_ep=200, narr_ep=1, log_fn=None, seed=99):
+    e = RunnerEnv(preset=env.preset, warning_time=env.warning_time, seed=seed)
+    records = defaultdict(list)
+    correct_count = 0; total = 0; wins = 0
+    for ep in range(n_ep):
+        s = e.reset(active_cases=active); done = False; step = 0
+        narr = (ep < narr_ep and log_fn is not None)
+        if narr: log_fn(f"\n--- Episode {ep+1} ({kind}, {env.preset}) ---\n")
+        while not done:
+            q = agent.q_vals(s)
+            a = int(np.argmax(q))
+            rule_a = rule_based(e, s)
+            gap = float(np.sort(q)[::-1][0] - np.sort(q)[::-1][1])
+            records[bucket_of(gap)].append(int(a == rule_a))
+            correct_count += int(a == rule_a); total += 1
+            if narr: log_fn(narrative_block(step, e, q, a, rule_a, kind.upper()))
+            s, r, done, info = e.step(a); step += 1
+        if info.get('reason') == 'goal': wins += 1
+        if narr:
+            log_fn(f"--- Ended: {info.get('reason')} after {step} steps ---\n")
+    return records, correct_count/total if total else 0, wins/n_ep
+
+def calibration_table(records):
+    rows = []
+    for name, lo, hi in BUCKETS:
+        lst = records.get(name, [])
+        rows.append((name, len(lst), sum(lst)/len(lst) if lst else 0.0))
+    return rows
+
+# ============================================================
+# MAIN
+# ============================================================
+
+if __name__ == "__main__":
+    random.seed(0); np.random.seed(0); torch.manual_seed(0)
+
+    all_tables = {}       # (preset, model) -> calibration rows
+    summary_rows = []     # summary table rows
+
+    for preset in ["cheat", "no_cheat"]:
+        print(f"\n{'='*60}\nPRESET: {preset}\n{'='*60}")
+        env = RunnerEnv(preset=preset, warning_time=2.0, seed=0)
+        active = [0, 1, 2, 3, 4]
+
+        # create narrative file for this preset
+        narr_path = os.path.join(OUT, f"narrative_{preset}.txt")
+        nf = open(narr_path, "w", buffering=1)
+        def log_fn(s): nf.write(s + "\n")
+
+        for kind, cls in [("dqn", DQNAgent), ("ppo", PPOAgent),
+                          ("a2c", A2CAgent), ("sac", SACAgent)]:
+            print(f"  training {kind}...")
+            agent = cls(env.state_dim, env.n_actions)
+            t0 = time.time()
+            train(agent, kind, env, active, episodes=600, log_fn=log_fn)
+            dt = time.time() - t0
+            log_fn(f"\n### {kind} trained in {dt:.1f}s\n")
+            print(f"    done in {dt:.1f}s")
+
+            records, overall, wins = run_calibration(
+                agent, env, active, kind, n_ep=200, narr_ep=1,
+                log_fn=log_fn, seed=99)
+            table = calibration_table(records)
+            all_tables[(preset, kind)] = table
+            summary_rows.append((preset, kind, overall, wins))
+            log_fn(f"### {kind} overall correct={overall:.3f} win={wins:.3f}")
+
+        nf.close()
+
+    # ---------- summary file ----------
+    with open(os.path.join(OUT, "summary.txt"), "w") as f:
+        f.write("=" * 70 + "\n")
+        f.write("CALIBRATION SUMMARY\n")
+        f.write("=" * 70 + "\n\n")
+        f.write(f"{'preset':12s} {'model':6s} {'overall_correct':>16s} {'win_rate':>10s}\n")
+        f.write("-" * 70 + "\n")
+        for preset, kind, overall, wins in summary_rows:
+            f.write(f"{preset:12s} {kind:6s} {overall:>16.3f} {wins:>10.3f}\n")
+        f.write("\n\n")
+        for (preset, kind), table in all_tables.items():
+            f.write(f"--- {preset} / {kind} ---\n")
+            for name, n, pct in table:
+                f.write(f"  {name:16s}  n={n:>7d}  correct={pct*100:>5.1f}%\n")
+            f.write("\n")
+
+    # ---------- plots ----------
+    for preset in ["cheat", "no_cheat"]:
+        fig, ax = plt.subplots(figsize=(9, 5))
+        x = np.arange(len(BUCKETS)); width = 0.2
+        for i, kind in enumerate(["dqn", "ppo", "a2c", "sac"]):
+            table = all_tables.get((preset, kind), [])
+            ys = [r[2] for r in table]
+            ax.bar(x + (i - 1.5) * width, ys, width, label=kind.upper())
+        ax.set_xticks(x); ax.set_xticklabels([b[0] for b in BUCKETS], rotation=15)
+        ax.set_ylabel("% correct"); ax.set_ylim(0, 1)
+        ax.set_title(f"Calibration — {preset}")
+        ax.axhline(0.5, color='gray', linestyle='--', alpha=0.3)
+        ax.legend(); ax.grid(alpha=0.3, axis='y')
+        plt.tight_layout()
+        plt.savefig(os.path.join(OUT, f"calibration_{preset}.png"), dpi=120)
+        plt.close()
+
+    # ---------- zip ----------
+    zip_name = OUT + ".zip"
+    with zipfile.ZipFile(zip_name, "w", zipfile.ZIP_DEFLATED) as zf:
+        for root, _, files in os.walk(OUT):
+            for fn in files:
+                fp = os.path.join(root, fn)
+                zf.write(fp, os.path.relpath(fp, "."))
+
+    print(f"\n{'='*60}")
+    print(f"Done. Output folder: {OUT}/")
+    print(f"Zip: {zip_name}")
+    print(f"{'='*60}")
+    for fn in sorted(os.listdir(OUT)):
+        print(f"  {fn}")
